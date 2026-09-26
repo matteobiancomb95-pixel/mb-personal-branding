@@ -35,14 +35,16 @@
 - Verificato in preview: `/` e `/en` (title + html lang corretti), light/dark, 375/768/1366px, menu mobile, backend `/api/` OK, robots.txt servito come text/plain, nessun errore console bloccante.
 
 ## Pending / handoff
-- PORTRAIT_TODO: foto professionale da fornire (sostituire `PortraitFrame` in `sections/Hero.jsx`).
 - NASCITARA_SCREEN_TODO: screenshot reali dell'app (sostituire `ScreenFrame` in `components/Placeholders.jsx` / `sections/Work.jsx`).
 - LINKEDIN_URL: placeholder in `src/i18n/copy.js` — sostituire con il profilo reale.
 - Dominio di produzione: appena confermato aggiungere canonical, og:url, og:image (1200×630), hreflang reciproci, sitemap.xml (skill farm-seo-setup).
 - Dopo il deploy: attivare il toggle "Enable Search Engine Crawling and Optimisation" e riverificare sul dominio live.
 
+## Implemented (2026-09-26, iter 2)
+- Ritratto professionale reale integrato nell'hero (cornice circolare con tilt 3D), file in `public/assets/portrait.jpg`.
+- CV scaricabile: `public/assets/Matteo_Bianco_CV.pdf` + pulsanti "Scarica il CV"/"Download CV" in hero e contatti (entrambe le lingue).
+
 ## Backlog (prioritized)
-- P0: sostituzione asset TODO (ritratto, screenshot, LinkedIn) prima della pubblicazione.
+- P0: sostituzione asset TODO rimasti (screenshot NasciTara, LinkedIn) prima della pubblicazione.
 - P1: dominio personale + canonical/hreflang/sitemap + og:image.
-- P1: CV scaricabile (solo quando `CV_PDF_URL` disponibile).
 - P2: rotte dedicate per dettaglio progetti; analytics privacy-conscious (Plausible/GA4 disattivate finché non richieste).

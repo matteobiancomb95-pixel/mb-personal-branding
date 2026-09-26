@@ -2,6 +2,8 @@ export const NASCITARA_URL = "https://nascitara.vercel.app/";
 export const EMAIL = "matteobianco.mb95@gmail.com";
 // TODO: replace with the real public LinkedIn profile URL before publishing
 export const LINKEDIN_URL = "https://www.linkedin.com/in/matteobianco-placeholder";
+export const CV_PDF_URL = "/assets/Matteo_Bianco_CV.pdf";
+export const PORTRAIT_URL = "/assets/portrait.jpg";
 
 export const copy = {
   it: {
@@ -30,9 +32,9 @@ export const copy = {
       body: "Sono Matteo Bianco, CRM & Tech Project Manager con esperienza in automazione, integrazioni e sviluppo di prodotti digitali human-centered.",
       ctaPrimary: "Parliamo di un progetto",
       ctaSecondary: "Scopri il mio lavoro",
+      cvLabel: "Scarica il CV",
+      portraitAlt: "Ritratto di Matteo Bianco",
       availability: "Disponibile per progetti e collaborazioni selezionate",
-      portraitLabel: "RITRATTO · TODO",
-      portraitNote: "Foto professionale in arrivo",
     },
     marquee: ["Sistemi connessi", "Risultati umani", "CRM & lifecycle", "Automazione", "Integrazioni", "Prodotti digitali", "Customer journey", "Delivery"],
     impact: {
@@ -194,6 +196,7 @@ export const copy = {
       body: "Scrivimi due righe sul contesto e sull'obiettivo: rispondo personalmente a ogni proposta di progetto o collaborazione.",
       ctaEmail: "Scrivimi una email",
       ctaLinkedin: "LinkedIn",
+      ctaCv: "Scarica il CV",
     },
     footer: {
       tagline: "Sistemi connessi. Risultati umani.",
@@ -228,9 +231,9 @@ export const copy = {
       body: "I'm Matteo Bianco, a CRM & Tech Project Manager working across automation, integrations and human-centered digital products.",
       ctaPrimary: "Let's discuss a project",
       ctaSecondary: "Explore my work",
+      cvLabel: "Download CV",
+      portraitAlt: "Portrait of Matteo Bianco",
       availability: "Available for selected projects and collaborations",
-      portraitLabel: "PORTRAIT · TODO",
-      portraitNote: "Professional photo coming soon",
     },
     marquee: ["Connected systems", "Human outcomes", "CRM & lifecycle", "Automation", "Integrations", "Digital products", "Customer journey", "Delivery"],
     impact: {
@@ -392,6 +395,7 @@ export const copy = {
       body: "Write a couple of lines about your context and goal: I personally reply to every project or collaboration proposal.",
       ctaEmail: "Send me an email",
       ctaLinkedin: "LinkedIn",
+      ctaCv: "Download CV",
     },
     footer: {
       tagline: "Connected systems. Human outcomes.",

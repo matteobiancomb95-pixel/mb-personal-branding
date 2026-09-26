@@ -1,5 +1,5 @@
-import { Linkedin, Mail } from "lucide-react";
-import { EMAIL, LINKEDIN_URL } from "../i18n/copy";
+import { Download, Linkedin, Mail } from "lucide-react";
+import { CV_PDF_URL, EMAIL, LINKEDIN_URL } from "../i18n/copy";
 import { Reveal } from "../components/Reveal";
 import { Logo } from "../components/Logo";
 
@@ -49,6 +49,16 @@ export const Contact = ({ t }) => (
               >
                 <Linkedin size={16} />
                 {t.contact.ctaLinkedin}
+              </a>
+              <a
+                href={CV_PDF_URL}
+                download="Matteo_Bianco_CV.pdf"
+                data-testid="contact-cv-button"
+                className="inline-flex min-h-[44px] items-center gap-2.5 rounded-full border px-7 py-3 font-display text-sm font-bold transition-colors duration-200"
+                style={{ borderColor: "rgba(244,242,236,0.35)", color: "#F4F2EC" }}
+              >
+                <Download size={16} />
+                {t.contact.ctaCv}
               </a>
             </div>
           </div>

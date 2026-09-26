@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
-import { ArrowDown, ArrowRight } from "lucide-react";
-import { PortraitFrame } from "../components/Placeholders";
+import { ArrowDown, ArrowRight, Download } from "lucide-react";
+import { CV_PDF_URL, PORTRAIT_URL } from "../i18n/copy";
 
 const EASE = [0.22, 1, 0.36, 1];
 
@@ -101,6 +101,15 @@ export const Hero = ({ t }) => {
               {t.hero.ctaSecondary}
               <ArrowDown size={16} className="transition-transform duration-200 group-hover:translate-y-0.5" />
             </a>
+            <a
+              href={CV_PDF_URL}
+              download="Matteo_Bianco_CV.pdf"
+              data-testid="hero-cv-download"
+              className="group inline-flex min-h-[44px] items-center gap-2 px-2 font-display text-sm font-bold text-mut transition-colors duration-200 hover:text-brand"
+            >
+              <Download size={16} className="transition-transform duration-200 group-hover:translate-y-0.5" />
+              {t.hero.cvLabel}
+            </a>
           </motion.div>
 
           <motion.div
@@ -128,7 +137,25 @@ export const Hero = ({ t }) => {
           style={{ perspective: 900 }}
         >
           <motion.div style={reduce ? {} : { rotateX: rx, rotateY: ry }} className="will-change-transform">
-            <PortraitFrame label={t.hero.portraitLabel} note={t.hero.portraitNote} />
+            <div
+              className="relative rounded-2xl border border-line bg-surface p-5 shadow-lift lg:p-7"
+              data-testid="portrait-frame"
+            >
+              <img
+                src={PORTRAIT_URL}
+                alt={t.hero.portraitAlt}
+                data-testid="portrait-image"
+                width="800"
+                height="800"
+                className="aspect-square w-full rounded-full object-cover"
+                loading="eager"
+                decoding="async"
+              />
+              <span className="pointer-events-none absolute left-3 top-3 h-4 w-4 border-l-2 border-t-2 border-line-strong" />
+              <span className="pointer-events-none absolute right-3 top-3 h-4 w-4 border-r-2 border-t-2 border-line-strong" />
+              <span className="pointer-events-none absolute bottom-3 left-3 h-4 w-4 border-b-2 border-l-2 border-line-strong" />
+              <span className="pointer-events-none absolute bottom-3 right-3 h-4 w-4 border-b-2 border-r-2 border-line-strong" />
+            </div>
           </motion.div>
         </motion.div>
       </div>
