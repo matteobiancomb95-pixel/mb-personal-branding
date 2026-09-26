@@ -1,13 +1,13 @@
 import { Check, ExternalLink, Info, Sparkles } from "lucide-react";
-import { NASCITARA_URL } from "../i18n/copy";
+import { NASCITARA_FLOW_IMG, NASCITARA_URL } from "../i18n/copy";
 import { Reveal } from "../components/Reveal";
 
 export const NasciTara = ({ t }) => (
   <section id="nascitara" className="bg-bg" data-testid="nascitara-section">
     <div className="mx-auto max-w-7xl px-5 py-20 lg:px-10 lg:py-28">
       <div className="overflow-hidden rounded-3xl border border-line bg-surface shadow-soft">
-        <div className="border-b border-line bg-alt p-8 lg:p-12">
-          <Reveal>
+        <div className="grid grid-cols-1 items-center gap-8 border-b border-line bg-alt p-8 lg:grid-cols-12 lg:p-12">
+          <Reveal className="lg:col-span-7">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-coral" data-testid="nascitara-eyebrow">
               {t.nascitara.eyebrow}
             </p>
@@ -15,6 +15,18 @@ export const NasciTara = ({ t }) => (
               {t.nascitara.title}
             </h2>
             <p className="mt-4 max-w-prose text-mut">{t.nascitara.intro}</p>
+          </Reveal>
+          <Reveal delay={0.12} className="lg:col-span-5">
+            <img
+              src={NASCITARA_FLOW_IMG}
+              alt={t.nascitara.collageAlt}
+              data-testid="nascitara-flow-image"
+              width="1175"
+              height="1568"
+              loading="lazy"
+              decoding="async"
+              className="aspect-[4/3] w-full rounded-2xl border border-line object-cover object-top shadow-soft"
+            />
           </Reveal>
         </div>
 

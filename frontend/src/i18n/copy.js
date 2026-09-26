@@ -1,9 +1,10 @@
 export const NASCITARA_URL = "https://nascitara.vercel.app/";
 export const EMAIL = "matteobianco.mb95@gmail.com";
-// TODO: replace with the real public LinkedIn profile URL before publishing
-export const LINKEDIN_URL = "https://www.linkedin.com/in/matteobianco-placeholder";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/matteo-bianco-4729b917a/";
 export const CV_PDF_URL = "/assets/Matteo_Bianco_CV.pdf";
 export const PORTRAIT_URL = "/assets/portrait.jpg";
+export const NASCITARA_DETAIL_IMG = "/assets/nascitara-detail.png";
+export const NASCITARA_FLOW_IMG = "/assets/nascitara-flow.png";
 
 export const copy = {
   it: {
@@ -77,8 +78,7 @@ export const copy = {
         summary: "Una web app che combina i dati delle ecografie per stimare peso, lunghezza e percentile.",
         ctaTry: "Prova NasciTara",
         ctaCase: "Scopri la visione",
-        screenLabel: "NASCITARA SCREEN · TODO",
-        screenNote: "Screenshot dell'app in arrivo",
+        imageAlt: "Mockup dell'app NasciTara: peso stimato, percentile, lunghezza e traiettoria di crescita",
       },
       small: [
         {
@@ -97,6 +97,7 @@ export const copy = {
       eyebrow: "Case study · NasciTara",
       title: "Da un problema umano a un prodotto digitale.",
       intro: "NasciTara è il progetto in cui il project manager è diventato builder: product concept, analisi, UX direction, prototipazione e sviluppo assistito da AI.",
+      collageAlt: "Flusso dell'app NasciTara: caricamento ecografia, valori compilati automaticamente, risultati e storico",
       todayTitle: "Oggi",
       today: [
         "Stima di peso e lunghezza fetale combinando più ecografie (modello Hadlock)",
@@ -185,6 +186,7 @@ export const copy = {
       paragraphs: [
         "Sono Matteo Bianco, CRM & Tech Project Manager con circa sei anni di esperienza tra retail, fashion, FMCG, tecnologia, pharma e assicurazioni.",
         "Ho progettato ecosistemi CRM, automazioni e customer journey per realtà molto diverse tra loro, con un filo comune: trasformare dati e processi complessi in sistemi semplici da usare e facili da misurare.",
+        "Sono anche un esperto di business e revenue model: analizzando i processi e studiando tutte le funzioni aziendali — marketing, vendite, operations, prodotto — individuo dove intervenire per far scalare il business. È la parte del mio lavoro più vicina al growth management.",
         "Con NasciTara ho portato lo stesso metodo in un prodotto personale, nato da un problema umano: dare ai futuri genitori una risposta più chiara dentro una mole di dati ecografici.",
       ],
       stackTitle: "Strumenti con cui lavoro",
@@ -276,8 +278,7 @@ export const copy = {
         summary: "A web app that combines ultrasound data to estimate fetal weight, length, and percentile.",
         ctaTry: "Try NasciTara",
         ctaCase: "Explore the vision",
-        screenLabel: "NASCITARA SCREEN · TODO",
-        screenNote: "App screenshot coming soon",
+        imageAlt: "NasciTara app mockup: estimated weight, percentile, length and growth trajectory",
       },
       small: [
         {
@@ -296,6 +297,7 @@ export const copy = {
       eyebrow: "Case study · NasciTara",
       title: "From a human problem to a digital product.",
       intro: "NasciTara is the project where the project manager became a builder: product concept, analysis, UX direction, prototyping and AI-assisted development.",
+      collageAlt: "NasciTara app flow: ultrasound upload, auto-filled values, results and history",
       todayTitle: "Today",
       today: [
         "Fetal weight and length estimation by combining multiple ultrasounds (Hadlock model)",
@@ -384,6 +386,7 @@ export const copy = {
       paragraphs: [
         "I'm Matteo Bianco, a CRM & Tech Project Manager with around six years of experience across retail, fashion, FMCG, technology, pharma and insurance.",
         "I've designed CRM ecosystems, automations and customer journeys for very different organisations, with one common thread: turning complex data and processes into systems that are simple to use and easy to measure.",
+        "I'm also experienced in business and revenue models: by analysing processes and studying every company function — marketing, sales, operations, product — I identify where to act to scale the business. It's the part of my work closest to growth management.",
         "With NasciTara I brought the same method to a personal product, born from a human problem: giving expecting parents a clearer answer inside a mass of ultrasound data.",
       ],
       stackTitle: "Tools I work with",

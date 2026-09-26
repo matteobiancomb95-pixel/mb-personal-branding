@@ -34,9 +34,12 @@
 - SEO: title/description per locale via JS, OG/Twitter/JSON-LD statici, robots.txt, llms.txt, favicon SVG.
 - Verificato in preview: `/` e `/en` (title + html lang corretti), light/dark, 375/768/1366px, menu mobile, backend `/api/` OK, robots.txt servito come text/plain, nessun errore console bloccante.
 
+## Implemented (2026-09-26, iter 3)
+- LinkedIn reale collegato: https://www.linkedin.com/in/matteo-bianco-4729b917a/ (pulsante contatti + JSON-LD sameAs + llms.txt).
+- Mockup reali NasciTara integrati da ZIP utente: `nascitara-detail.png` nella card featured (pannello tinta corallo), `nascitara-flow.png` nella sezione visione. Rimosso Placeholders.jsx (non più usato).
+- About: aggiunto paragrafo growth — esperto di business e revenue model, analisi dei processi e delle funzioni aziendali per far scalare il business (IT+EN).
+
 ## Pending / handoff
-- NASCITARA_SCREEN_TODO: screenshot reali dell'app (sostituire `ScreenFrame` in `components/Placeholders.jsx` / `sections/Work.jsx`).
-- LINKEDIN_URL: placeholder in `src/i18n/copy.js` — sostituire con il profilo reale.
 - Dominio di produzione: appena confermato aggiungere canonical, og:url, og:image (1200×630), hreflang reciproci, sitemap.xml (skill farm-seo-setup).
 - Dopo il deploy: attivare il toggle "Enable Search Engine Crawling and Optimisation" e riverificare sul dominio live.
 
@@ -45,6 +48,6 @@
 - CV scaricabile: `public/assets/Matteo_Bianco_CV.pdf` + pulsanti "Scarica il CV"/"Download CV" in hero e contatti (entrambe le lingue).
 
 ## Backlog (prioritized)
-- P0: sostituzione asset TODO rimasti (screenshot NasciTara, LinkedIn) prima della pubblicazione.
+- P0: nessun asset TODO rimasto (ritratto, mockup NasciTara, LinkedIn, CV tutti integrati).
 - P1: dominio personale + canonical/hreflang/sitemap + og:image.
 - P2: rotte dedicate per dettaglio progetti; analytics privacy-conscious (Plausible/GA4 disattivate finché non richieste).

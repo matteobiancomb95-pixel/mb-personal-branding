@@ -1,7 +1,6 @@
 import { ArrowUpRight, ExternalLink } from "lucide-react";
-import { NASCITARA_URL } from "../i18n/copy";
+import { NASCITARA_DETAIL_IMG, NASCITARA_URL } from "../i18n/copy";
 import { Reveal, SectionHead } from "../components/Reveal";
-import { ScreenFrame } from "../components/Placeholders";
 
 export const Work = ({ t }) => (
   <section id="work" className="bg-alt" data-testid="work-section">
@@ -51,8 +50,20 @@ export const Work = ({ t }) => (
                 </a>
               </div>
             </div>
-            <div className="flex items-center p-6 lg:p-10">
-              <ScreenFrame label={t.work.featured.screenLabel} note={t.work.featured.screenNote} />
+            <div
+              className="flex items-center justify-center p-6 lg:p-10"
+              style={{ backgroundColor: "color-mix(in srgb, var(--coral) 6%, var(--surface))" }}
+            >
+              <img
+                src={NASCITARA_DETAIL_IMG}
+                alt={t.work.featured.imageAlt}
+                data-testid="nascitara-screen-image"
+                width="1080"
+                height="960"
+                loading="lazy"
+                decoding="async"
+                className="w-full max-w-lg rounded-2xl border border-line shadow-lift"
+              />
             </div>
           </div>
         </article>
