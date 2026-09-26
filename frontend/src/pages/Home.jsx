@@ -11,6 +11,7 @@ import { NasciTara } from "../sections/NasciTara";
 import { Career } from "../sections/Career";
 import { Principles } from "../sections/Principles";
 import { About } from "../sections/About";
+import { Growth } from "../sections/Growth";
 import { Contact } from "../sections/Contact";
 import { Footer } from "../sections/Footer";
 
@@ -68,6 +69,7 @@ export default function Home({ locale }) {
         <Career t={t} />
         <Principles t={t} />
         <About t={t} />
+        <Growth t={t} />
         <Contact t={t} />
       </main>
       <Footer t={t} />

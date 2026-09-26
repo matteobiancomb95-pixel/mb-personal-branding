@@ -43,6 +43,10 @@
 - Dominio di produzione: appena confermato aggiungere canonical, og:url, og:image (1200×630), hreflang reciproci, sitemap.xml (skill farm-seo-setup).
 - Dopo il deploy: attivare il toggle "Enable Search Engine Crawling and Optimisation" e riverificare sul dominio live.
 
+## Implemented (2026-09-26, iter 4)
+- Ritratto ridotto (max ~360px desktop) su richiesta utente.
+- Nuova sezione editoriale "Growth & Business Model" (#growth, tra Profilo e Contatti, voce in nav): narrativa su startup/Business Model Canvas/growth strategy + card "Esempio concreto" Maiora/Despar con metriche reali (€2M, ~20x MROI, +100% YoY) e leve attivate. Bilingue IT/EN.
+
 ## Implemented (2026-09-26, iter 2)
 - Ritratto professionale reale integrato nell'hero (cornice circolare con tilt 3D), file in `public/assets/portrait.jpg`.
 - CV scaricabile: `public/assets/Matteo_Bianco_CV.pdf` + pulsanti "Scarica il CV"/"Download CV" in hero e contatti (entrambe le lingue).

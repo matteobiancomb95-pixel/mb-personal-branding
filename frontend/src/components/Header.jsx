@@ -39,6 +39,7 @@ export const Header = ({ t, locale }) => {
     { hash: "#nascitara", label: t.nav.nascitara },
     { hash: "#career", label: t.nav.career },
     { hash: "#about", label: t.nav.about },
+    { hash: "#growth", label: t.nav.growth },
     { hash: "#contact", label: t.nav.contact },
   ];
 
