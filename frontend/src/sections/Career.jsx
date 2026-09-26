@@ -1,10 +1,43 @@
 import { GraduationCap } from "lucide-react";
+import { logoSrc } from "../i18n/copy";
 import { Reveal, SectionHead } from "../components/Reveal";
+
+const LOGOS = [
+  { key: "coccolebimbi", name: "CoccoleBimbi" },
+  { key: "despar", name: "Despar Centro Sud" },
+  { key: "spoki", name: "Spoki" },
+  { key: "roche", name: "Roche" },
+  { key: "deloitte", name: "Deloitte" },
+  { key: "lipari", name: "Lipari Consulting" },
+];
 
 export const Career = ({ t }) => (
   <section id="career" className="bg-surface" data-testid="career-section">
     <div className="wrap py-20 lg:py-28">
       <SectionHead eyebrow={t.career.eyebrow} title={t.career.title} id="career" />
+
+      <Reveal className="mt-8">
+        <div data-testid="career-logos">
+          <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-mut">{t.career.logosLabel}</p>
+          <ul className="mt-4 flex flex-wrap items-center gap-3">
+            {LOGOS.map((logo) => (
+              <li
+                key={logo.key}
+                className="flex h-14 items-center rounded-xl border border-line bg-white px-4 opacity-80 grayscale-[40%] transition-all duration-200 hover:opacity-100 hover:grayscale-0"
+                data-testid={`career-logo-${logo.key}`}
+              >
+                <img
+                  src={logoSrc(logo.key)}
+                  alt={logo.name}
+                  className="max-h-7 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Reveal>
 
       <Reveal className="mt-12">
         <ol className="border-t border-line" data-testid="career-timeline">

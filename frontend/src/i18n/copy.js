@@ -5,6 +5,8 @@ export const CV_PDF_URL = "/assets/Matteo_Bianco_CV.pdf";
 export const PORTRAIT_URL = "/assets/portrait.jpg";
 export const NASCITARA_DETAIL_IMG = "/assets/nascitara-detail.png";
 export const NASCITARA_FLOW_IMG = "/assets/nascitara-flow.png";
+export const NASCITARA_REEL = "/assets/nascitara-reel.mp4";
+export const logoSrc = (key) => `/assets/logos/${key}.jpg`;
 
 export const copy = {
   it: {
@@ -16,7 +18,7 @@ export const copy = {
     },
     pageSeo: {
       expertise: { title: "Competenze — Matteo Bianco", description: "Strategie CRM, automazioni, integrazioni e delivery di prodotti digitali: le tre aree con cui progetto sistemi che funzionano." },
-      work: { title: "Progetti — Matteo Bianco", description: "NasciTara, la loyalty app di Despar Centro Sud e la migrazione Salesforce Lightning in Roche: progetti che raccontano il metodo." },
+      work: { title: "Progetti — Matteo Bianco", description: "NasciTara, CoccoleBimbi, la loyalty app di Despar Centro Sud e la migrazione Salesforce Lightning in Roche: progetti che raccontano il metodo." },
       nascitara: { title: "NasciTara — Case study | Matteo Bianco", description: "Da un problema umano a un prodotto digitale: la web app che combina le ecografie per stimare peso, lunghezza e percentile." },
       career: { title: "Esperienza — Matteo Bianco", description: "Sei anni tra CRM, automazione e delivery: CoccoleBimbi, Maiora/Despar Centro Sud, Spoki, Roche, Deloitte, Reale Mutua." },
       about: { title: "Profilo — Matteo Bianco", description: "CRM & Tech Project Manager, esperto di business e revenue model, builder di prodotti digitali human-centered." },
@@ -84,6 +86,7 @@ export const copy = {
     work: {
       eyebrow: "Lavori selezionati",
       title: "Progetti che raccontano il metodo.",
+      cardLink: "Approfondisci il progetto",
       featured: {
         category: "Progetto personale · Product & AI-assisted development",
         title: "Dati complessi, una risposta più chiara per i futuri genitori.",
@@ -94,11 +97,29 @@ export const copy = {
       },
       small: [
         {
+          key: "coccolebimbi",
+          logo: "coccolebimbi",
+          logoAlt: "Logo CoccoleBimbi",
+          period: "2026 — oggi",
+          status: "In corso",
+          title: "CoccoleBimbi — Strategia CRM",
+          role: "CRM & Marketing Automation Manager",
+          desc: "Redazione della strategia CRM con focus su targeting e su un flusso di customer journey dedicato ai futuri genitori.",
+        },
+        {
+          key: "despar",
+          logo: "despar",
+          logoAlt: "Logo Despar",
+          period: "2025 — 2026",
           title: "Despar Centro Sud — Loyalty App",
           role: "CRM & E-commerce Manager · Maiora",
           desc: "Strategia CRM, customer journey e decisioni data-driven per l'app loyalty omnicanale di Despar Centro Sud.",
         },
         {
+          key: "roche",
+          logo: "roche",
+          logoAlt: "Logo Roche",
+          period: "2023 — 2024",
           title: "Roche — Salesforce Lightning Migration",
           role: "CRM Specialist / Salesforce Administrator",
           desc: "Supporto al go-live italiano della migrazione a Salesforce Lightning: rilasci in ambiente di test, UAT e adozione utenti.",
@@ -110,6 +131,9 @@ export const copy = {
       title: "Da un problema umano a un prodotto digitale.",
       intro: "NasciTara è il progetto in cui il project manager è diventato builder: product concept, analisi, UX direction, prototipazione e sviluppo assistito da AI.",
       collageAlt: "Flusso dell'app NasciTara: caricamento ecografia, valori compilati automaticamente, risultati e storico",
+      videoLabel: "Il flusso in azione",
+      videoCaption: "Reel UX: caricamento dell'ecografia, valori compilati automaticamente, risultati e storico.",
+      videoPlay: "Riproduci il video del flusso NasciTara",
       todayTitle: "Oggi",
       today: [
         "Stima di peso e lunghezza fetale combinando più ecografie (modello Hadlock)",
@@ -131,6 +155,7 @@ export const copy = {
     career: {
       eyebrow: "Esperienza",
       title: "Il percorso fin qui.",
+      logosLabel: "Aziende con cui ho lavorato",
       currentLabel: "Attuale",
       items: [
         {
@@ -226,6 +251,82 @@ export const copy = {
       leversLabel: "Leve attivate",
       levers: ["Segmentazione e journey omnicanale", "Automazione delle campagne", "Misurazione, test, iterazione"],
     },
+    projectPages: {
+      backToProjects: "Tutti i progetti",
+      cta: "Parliamo del tuo progetto",
+      coccolebimbi: {
+        seoTitle: "CoccoleBimbi — Strategia CRM | Matteo Bianco",
+        seoDesc: "Strategia CRM con focus su targeting e customer journey dedicata ai futuri genitori, per il retail childrenswear CoccoleBimbi.",
+        category: "CRM strategy · Childrenswear retail",
+        period: "2026 — oggi",
+        status: "In corso",
+        title: "CoccoleBimbi — Strategia CRM per i futuri genitori",
+        role: "CRM & Marketing Automation Manager",
+        logo: "coccolebimbi",
+        logoAlt: "Logo CoccoleBimbi",
+        intro: "Mi sto occupando della redazione della strategia CRM di CoccoleBimbi, con focus sul targeting e sull'individuazione di un flusso di customer journey dedicato alle persone che stanno per diventare genitori.",
+        activitiesTitle: "Di cosa mi occupo",
+        activities: [
+          "Analisi e segmentazione della base clienti",
+          "Individuazione del journey dedicato ai futuri genitori",
+          "Progettazione dei flussi di marketing automation",
+          "Definizione delle metriche di misurazione del journey",
+        ],
+        outcomeTitle: "La logica del journey",
+        outcomeNote: "La strategia è in fase di redazione: il percorso viene progettato prima di essere attivato.",
+        chart: "journey",
+        chartStages: ["Targeting", "Journey futuri genitori", "Misurazione"],
+      },
+      despar: {
+        seoTitle: "Despar Centro Sud — Loyalty App | Matteo Bianco",
+        seoDesc: "Strategia CRM, customer journey e quick commerce per l'app loyalty omnicanale di Despar Centro Sud: €2M di vendite incrementali e ~20x MROI.",
+        category: "CRM & E-commerce · Retail GDO",
+        period: "2025 — 2026",
+        title: "Despar Centro Sud — Loyalty App",
+        role: "CRM & E-commerce Manager · Maiora S.p.A. SB",
+        logo: "despar",
+        logoAlt: "Logo Despar",
+        intro: "L'obiettivo: unificare la relazione con i clienti di Despar Centro Sud in un'app loyalty omnicanale, trasformando il programma fedeltà in una leva di ricavo misurabile.",
+        activitiesTitle: "Cosa ho fatto",
+        activities: [
+          "Strategia CRM e architettura del programma loyalty",
+          "Progettazione dei customer journey omnicanale",
+          "Decisioni data-driven su campagne e quick commerce",
+          "Lancio del servizio Glovo Quick Commerce",
+        ],
+        outcomeTitle: "Risultati",
+        outcomeNote: "Risultati raggiunti insieme ai team marketing, e-commerce e operations di Maiora.",
+        chart: "bars",
+        chartTitle: "Ricavi quick commerce — indice anno su anno",
+        chartBars: ["Anno 1", "Anno 2"],
+        stats: [
+          { value: "€2M", label: "vendite incrementali dal programma loyalty e CRM" },
+          { value: "~20x", label: "ritorno sull'investimento marketing (MROI)" },
+          { value: "+100%", label: "crescita dei ricavi quick commerce YoY" },
+        ],
+      },
+      roche: {
+        seoTitle: "Roche — Migrazione Salesforce Lightning | Matteo Bianco",
+        seoDesc: "Supporto al go-live italiano della migrazione Salesforce Lightning in Roche: rilasci in ambiente di test, UAT e adozione utenti.",
+        category: "CRM · Pharma",
+        period: "2023 — 2024",
+        title: "Roche — Migrazione Salesforce Lightning",
+        role: "CRM Specialist / Salesforce Administrator",
+        logo: "roche",
+        logoAlt: "Logo Roche",
+        intro: "Accompagnare l'organizzazione italiana di Roche nella migrazione a Salesforce Lightning, senza interrompere il lavoro quotidiano dei team.",
+        activitiesTitle: "Cosa ho fatto",
+        activities: [
+          "Rilasci progressivi in ambiente di test",
+          "Coordinamento ed esecuzione degli UAT",
+          "Supporto all'adozione da parte degli utenti",
+        ],
+        outcomeTitle: "Esito",
+        outcomeNote: "Go-live italiano completato, con adozione accompagnata degli utenti.",
+        chart: "steps",
+        chartSteps: ["Analisi", "Test", "UAT", "Go-live"],
+      },
+    },
     contact: {
       eyebrow: "Contatti",
       title: "Hai un processo da semplificare o un prodotto da validare?",
@@ -251,7 +352,7 @@ export const copy = {
     },
     pageSeo: {
       expertise: { title: "Expertise — Matteo Bianco", description: "CRM strategy, automations, integrations and digital product delivery: the three areas I use to design systems that work." },
-      work: { title: "Projects — Matteo Bianco", description: "NasciTara, the Despar Centro Sud loyalty app and the Roche Salesforce Lightning migration: projects that show the method." },
+      work: { title: "Projects — Matteo Bianco", description: "NasciTara, CoccoleBimbi, the Despar Centro Sud loyalty app and the Roche Salesforce Lightning migration: projects that show the method." },
       nascitara: { title: "NasciTara — Case study | Matteo Bianco", description: "From a human problem to a digital product: the web app that combines ultrasounds to estimate weight, length and percentile." },
       career: { title: "Experience — Matteo Bianco", description: "Six years across CRM, automation and delivery: CoccoleBimbi, Maiora/Despar Centro Sud, Spoki, Roche, Deloitte, Reale Mutua." },
       about: { title: "About — Matteo Bianco", description: "CRM & Tech Project Manager, experienced in business and revenue models, builder of human-centered digital products." },
@@ -319,6 +420,7 @@ export const copy = {
     work: {
       eyebrow: "Selected work",
       title: "Projects that show the method.",
+      cardLink: "View the project",
       featured: {
         category: "Personal venture · Product & AI-assisted development",
         title: "Complex data, a clearer answer for expecting parents.",
@@ -329,11 +431,29 @@ export const copy = {
       },
       small: [
         {
+          key: "coccolebimbi",
+          logo: "coccolebimbi",
+          logoAlt: "CoccoleBimbi logo",
+          period: "2026 — present",
+          status: "Ongoing",
+          title: "CoccoleBimbi — CRM Strategy",
+          role: "CRM & Marketing Automation Manager",
+          desc: "Writing the CRM strategy with a focus on targeting and a dedicated customer journey flow for expecting parents.",
+        },
+        {
+          key: "despar",
+          logo: "despar",
+          logoAlt: "Despar logo",
+          period: "2025 — 2026",
           title: "Despar Centro Sud — Loyalty App",
           role: "CRM & E-commerce Manager · Maiora",
           desc: "CRM strategy, customer journeys and data-driven decisions for the Despar Centro Sud omnichannel loyalty app.",
         },
         {
+          key: "roche",
+          logo: "roche",
+          logoAlt: "Roche logo",
+          period: "2023 — 2024",
           title: "Roche — Salesforce Lightning Migration",
           role: "CRM Specialist / Salesforce Administrator",
           desc: "Supported the Italian rollout of the Salesforce Lightning migration: test-environment releases, UAT and user adoption.",
@@ -345,6 +465,9 @@ export const copy = {
       title: "From a human problem to a digital product.",
       intro: "NasciTara is the project where the project manager became a builder: product concept, analysis, UX direction, prototyping and AI-assisted development.",
       collageAlt: "NasciTara app flow: ultrasound upload, auto-filled values, results and history",
+      videoLabel: "The flow in action",
+      videoCaption: "UX reel: ultrasound upload, auto-filled values, results and history.",
+      videoPlay: "Play the NasciTara flow video",
       todayTitle: "Today",
       today: [
         "Fetal weight and length estimation by combining multiple ultrasounds (Hadlock model)",
@@ -366,6 +489,7 @@ export const copy = {
     career: {
       eyebrow: "Experience",
       title: "The journey so far.",
+      logosLabel: "Companies I've worked with",
       currentLabel: "Current",
       items: [
         {
@@ -460,6 +584,82 @@ export const copy = {
       ],
       leversLabel: "Levers activated",
       levers: ["Segmentation and omnichannel journeys", "Campaign automation", "Measure, test, iterate"],
+    },
+    projectPages: {
+      backToProjects: "All projects",
+      cta: "Discuss your project",
+      coccolebimbi: {
+        seoTitle: "CoccoleBimbi — CRM Strategy | Matteo Bianco",
+        seoDesc: "CRM strategy focused on targeting and a dedicated customer journey for expecting parents, for childrenswear retailer CoccoleBimbi.",
+        category: "CRM strategy · Childrenswear retail",
+        period: "2026 — present",
+        status: "Ongoing",
+        title: "CoccoleBimbi — CRM strategy for expecting parents",
+        role: "CRM & Marketing Automation Manager",
+        logo: "coccolebimbi",
+        logoAlt: "CoccoleBimbi logo",
+        intro: "I'm writing the CRM strategy for CoccoleBimbi, focusing on targeting and on designing a customer journey flow dedicated to people who are about to become parents.",
+        activitiesTitle: "What I'm working on",
+        activities: [
+          "Customer base analysis and segmentation",
+          "Designing the dedicated journey for expecting parents",
+          "Marketing automation flow design",
+          "Defining the journey measurement metrics",
+        ],
+        outcomeTitle: "The journey logic",
+        outcomeNote: "The strategy is currently being written: the journey is designed before it goes live.",
+        chart: "journey",
+        chartStages: ["Targeting", "Expecting-parents journey", "Measurement"],
+      },
+      despar: {
+        seoTitle: "Despar Centro Sud — Loyalty App | Matteo Bianco",
+        seoDesc: "CRM strategy, customer journeys and quick commerce for the Despar Centro Sud omnichannel loyalty app: €2M incremental sales and ~20x MROI.",
+        category: "CRM & E-commerce · Grocery retail",
+        period: "2025 — 2026",
+        title: "Despar Centro Sud — Loyalty App",
+        role: "CRM & E-commerce Manager · Maiora S.p.A. SB",
+        logo: "despar",
+        logoAlt: "Despar logo",
+        intro: "The goal: unify the relationship with Despar Centro Sud customers in one omnichannel loyalty app, turning the loyalty programme into a measurable revenue lever.",
+        activitiesTitle: "What I did",
+        activities: [
+          "CRM strategy and loyalty programme architecture",
+          "Omnichannel customer journey design",
+          "Data-driven decisions on campaigns and quick commerce",
+          "Launch of the Glovo Quick Commerce service",
+        ],
+        outcomeTitle: "Outcomes",
+        outcomeNote: "Results achieved together with Maiora's marketing, e-commerce and operations teams.",
+        chart: "bars",
+        chartTitle: "Quick-commerce revenue — YoY index",
+        chartBars: ["Year 1", "Year 2"],
+        stats: [
+          { value: "€2M", label: "incremental sales from the loyalty & CRM programme" },
+          { value: "~20x", label: "return on marketing investment (MROI)" },
+          { value: "+100%", label: "quick-commerce revenue growth YoY" },
+        ],
+      },
+      roche: {
+        seoTitle: "Roche — Salesforce Lightning Migration | Matteo Bianco",
+        seoDesc: "Supported the Italian go-live of the Salesforce Lightning migration at Roche: test releases, UAT and user adoption.",
+        category: "CRM · Pharma",
+        period: "2023 — 2024",
+        title: "Roche — Salesforce Lightning Migration",
+        role: "CRM Specialist / Salesforce Administrator",
+        logo: "roche",
+        logoAlt: "Roche logo",
+        intro: "Supporting Roche's Italian organisation through the migration to Salesforce Lightning, without disrupting the teams' daily work.",
+        activitiesTitle: "What I did",
+        activities: [
+          "Progressive releases in the test environment",
+          "UAT coordination and execution",
+          "User adoption support",
+        ],
+        outcomeTitle: "Outcome",
+        outcomeNote: "Italian go-live completed, with guided user adoption.",
+        chart: "steps",
+        chartSteps: ["Analysis", "Test", "UAT", "Go-live"],
+      },
     },
     contact: {
       eyebrow: "Contact",

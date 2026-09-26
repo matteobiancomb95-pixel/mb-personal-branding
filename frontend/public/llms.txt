@@ -13,6 +13,9 @@
 - /it/profilo · /en/about — biography and toolset.
 - /it/growth · /en/growth — business & revenue model editorial with the Maiora / Despar Centro Sud example.
 - /it/contatti · /en/contact — email and LinkedIn contact.
+- /it/progetti/coccolebimbi · /en/projects/coccolebimbi — CRM strategy for expecting parents (ongoing).
+- /it/progetti/despar-centro-sud · /en/projects/despar-centro-sud — loyalty app, quick commerce, outcomes with YoY chart.
+- /it/progetti/roche · /en/projects/roche — Salesforce Lightning migration with delivery process steps.
 
 ## Highlights
 

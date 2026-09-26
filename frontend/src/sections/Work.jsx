@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
-import { ArrowUpRight, ExternalLink } from "lucide-react";
-import { NASCITARA_DETAIL_IMG, NASCITARA_URL } from "../i18n/copy";
-import { sectionPath } from "../routes";
+import { Link, useNavigate } from "react-router-dom";
+import { ArrowRight, ArrowUpRight, ExternalLink } from "lucide-react";
+import { NASCITARA_DETAIL_IMG, NASCITARA_URL, logoSrc } from "../i18n/copy";
+import { projectPath, sectionPath } from "../routes";
 import { Reveal, SectionHead } from "../components/Reveal";
 
 export const Work = ({ t, locale = "it" }) => {
@@ -30,7 +30,7 @@ export const Work = ({ t, locale = "it" }) => {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="flex flex-col justify-center p-8 lg:p-12">
-                <span className="inline-flex w-fit items-center rounded-full border border-coral px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-coral">
+                <span className="inline-flex w-fit items-center rounded-md border border-coral px-3 py-1.5 text-[13px] font-bold uppercase tracking-[0.12em] text-coral">
                   {t.work.featured.category}
                 </span>
                 <h3 className="mt-6 font-display text-2xl font-bold tracking-tight text-ink lg:text-3xl">
@@ -46,19 +46,19 @@ export const Work = ({ t, locale = "it" }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     data-testid="nascitara-external-link"
-                    className="group inline-flex min-h-[44px] items-center gap-2 rounded-full bg-brand px-6 py-2.5 font-display text-sm font-bold text-onbrand transition-colors duration-200 hover:bg-brand-hover"
+                    className="btn inline-flex h-12 items-center gap-2 rounded-xl bg-brand px-6 font-display text-sm font-bold text-onbrand hover:bg-brand-hover"
                   >
                     {t.work.featured.ctaTry}
-                    <ExternalLink size={15} className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                    <ExternalLink size={15} className="btn-arrow" />
                   </a>
                   <a
                     href={sectionPath("nascitara", locale)}
                     onClick={goToNascitara}
                     data-testid="nascitara-case-link"
-                    className="group inline-flex min-h-[44px] items-center gap-2 rounded-full border border-linestrong px-6 py-2.5 font-display text-sm font-bold text-ink transition-colors duration-200 hover:border-brand hover:text-brand"
+                    className="btn inline-flex h-12 items-center gap-2 rounded-xl border border-linestrong px-6 font-display text-sm font-bold text-ink hover:border-brand hover:bg-alt hover:text-brand"
                   >
                     {t.work.featured.ctaCase}
-                    <ArrowUpRight size={15} className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                    <ArrowUpRight size={15} className="btn-arrow" />
                   </a>
                 </div>
               </div>
@@ -81,17 +81,36 @@ export const Work = ({ t, locale = "it" }) => {
           </article>
         </Reveal>
 
-        <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
+        <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-3">
           {t.work.small.map((p, i) => (
-            <Reveal key={i} delay={0.08 + i * 0.08}>
-              <article
-                className="card-lift h-full rounded-2xl border border-line bg-surface p-8 shadow-soft"
-                data-testid={`work-card-${i}`}
+            <Reveal key={p.key} delay={0.06 * (i + 1)} className="h-full">
+              <Link
+                to={projectPath(p.key, locale)}
+                className="card-lift group flex h-full flex-col rounded-2xl border border-line bg-surface p-7"
+                data-testid={`work-card-${p.key}`}
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-mut">{p.role}</p>
-                <h3 className="mt-3 font-display text-xl font-bold tracking-tight text-ink">{p.title}</h3>
-                <p className="mt-3 text-mut">{p.desc}</p>
-              </article>
+                <div className="flex items-center justify-between gap-3">
+                  <span className="flex h-10 items-center rounded-lg border border-line bg-white px-2.5">
+                    <img src={logoSrc(p.logo)} alt={p.logoAlt} className="max-h-6 w-auto" loading="lazy" decoding="async" />
+                  </span>
+                  <span className="tnum text-[12px] font-bold uppercase tracking-[0.12em] text-mut">{p.period}</span>
+                </div>
+                {p.status && (
+                  <span className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-md border border-line bg-alt px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-mut">
+                    <span className="h-1.5 w-1.5 rounded-full bg-sage" />
+                    {p.status}
+                  </span>
+                )}
+                <h3 className="mt-4 font-display text-lg font-bold leading-snug tracking-tight text-ink">
+                  {p.title}
+                </h3>
+                <p className="mt-1 text-[13px] font-semibold text-mut">{p.role}</p>
+                <p className="mt-3 text-sm leading-relaxed text-mut">{p.desc}</p>
+                <span className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-bold text-brand">
+                  {t.work.cardLink}
+                  <ArrowRight size={14} className="transition-transform duration-200 ease-out group-hover:translate-x-1" />
+                </span>
+              </Link>
             </Reveal>
           ))}
         </div>

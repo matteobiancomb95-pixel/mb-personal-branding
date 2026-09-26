@@ -43,6 +43,12 @@
 - Dominio di produzione: appena confermato aggiungere canonical, og:url, og:image (1200×630), hreflang reciproci, sitemap.xml (skill farm-seo-setup).
 - Dopo il deploy: attivare il toggle "Enable Search Engine Crawling and Optimisation" e riverificare sul dominio live.
 
+## Implemented (2026-09-26, iter 7)
+- Pagine dettaglio progetto: /it/progetti/{coccolebimbi,despar-centro-sud,roche} + /en/projects/... con SEO propria, logo azienda, ruolo, attività, blocco risultati e grafici SVG onesti (barre YoY quick commerce per Despar, stepper Analisi→Go-live per Roche, journey stages per CoccoleBimbi con badge "In corso"). Switcher lingua preserva la pagina progetto.
+- Nuovo progetto CoccoleBimbi (strategia CRM, targeting, journey futuri genitori) in Selected Work come card cliccabile con badge "In corso".
+- Video Reel UX nella sezione/pagina NasciTara: transcodificato H.264+AAC faststart (era in codec non supportato), poster estratto dal video, player con play overlay corallo e controlli nativi.
+- Logo wall "Aziende con cui ho lavorato" nella sezione Esperienza (CoccoleBimbi, Despar, Spoki, Roche, Deloitte, Lipari — loghi autocroppati via PIL, chip bianchi, grayscale→colore on hover).
+
 ## Implemented (2026-09-26, iter 6 — design refinement pass)
 - Design system: easing cubic-bezier(0.16,1,0.3,1) + token durate; tipografia fluida con clamp() (.display-1/.display-2, .eyebrow 13px); gutter condivisi (.wrap 20/32/48px); raggi normalizzati (bottoni 12px, controlli 10px, card 16px, panel 24px); grain 1.5% su hero e pannello contatti; selection teal trasparente.
 - Hero: niente più tilt 3D né avatar circolare — ritratto editoriale con cornice offset salvia, caption ruolo/città e badge disponibilità in overlap; ultima riga H1 in teal; nuove CTA ("Parliamo del tuo progetto"/"Discuss your project", "Esplora i progetti"/"Explore selected work", CV terziario); nuovo body copy IT/EN.
