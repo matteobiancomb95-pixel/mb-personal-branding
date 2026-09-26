@@ -4,7 +4,7 @@ import { Reveal } from "../components/Reveal";
 
 export const NasciTara = ({ t }) => (
   <section id="nascitara" className="bg-bg" data-testid="nascitara-section">
-    <div className="mx-auto max-w-7xl px-5 py-20 lg:px-10 lg:py-28">
+    <div className="wrap py-24 lg:py-36">
       <div className="overflow-hidden rounded-3xl border border-line bg-surface shadow-soft">
         <div className="grid grid-cols-1 items-center gap-8 border-b border-line bg-alt p-8 lg:grid-cols-12 lg:p-12">
           <Reveal className="lg:col-span-7">

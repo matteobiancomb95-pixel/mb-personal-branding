@@ -2,7 +2,7 @@ import { Reveal, SectionHead } from "../components/Reveal";
 
 export const About = ({ t }) => (
   <section id="about" className="bg-alt" data-testid="about-section">
-    <div className="mx-auto max-w-7xl px-5 py-20 lg:px-10 lg:py-28">
+    <div className="wrap py-20 lg:py-28">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <SectionHead eyebrow={t.about.eyebrow} title={t.about.title} id="about" />

@@ -2,7 +2,7 @@ import { Reveal, SectionHead } from "../components/Reveal";
 
 export const Principles = ({ t }) => (
   <section id="principles" className="bg-bg" data-testid="principles-section">
-    <div className="mx-auto max-w-7xl px-5 py-20 lg:px-10 lg:py-28">
+    <div className="wrap py-16 lg:py-24">
       <SectionHead eyebrow={t.principles.eyebrow} title={t.principles.title} id="principles" />
       <div className="mt-10">
         {t.principles.items.map((p, i) => (

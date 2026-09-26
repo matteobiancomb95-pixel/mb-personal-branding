@@ -43,6 +43,12 @@
 - Dominio di produzione: appena confermato aggiungere canonical, og:url, og:image (1200×630), hreflang reciproci, sitemap.xml (skill farm-seo-setup).
 - Dopo il deploy: attivare il toggle "Enable Search Engine Crawling and Optimisation" e riverificare sul dominio live.
 
+## Implemented (2026-09-26, iter 6 — design refinement pass)
+- Design system: easing cubic-bezier(0.16,1,0.3,1) + token durate; tipografia fluida con clamp() (.display-1/.display-2, .eyebrow 13px); gutter condivisi (.wrap 20/32/48px); raggi normalizzati (bottoni 12px, controlli 10px, card 16px, panel 24px); grain 1.5% su hero e pannello contatti; selection teal trasparente.
+- Hero: niente più tilt 3D né avatar circolare — ritratto editoriale con cornice offset salvia, caption ruolo/città e badge disponibilità in overlap; ultima riga H1 in teal; nuove CTA ("Parliamo del tuo progetto"/"Discuss your project", "Esplora i progetti"/"Explore selected work", CV terziario); nuovo body copy IT/EN.
+- Marquee rimossa (vietata dal brief) → FlowLine: linea sottile con nodi e dot pulsante (teal→salvia dopo hero, teal→corallo prima di NasciTara, disattivata in reduced-motion).
+- Impact: striscia editoriale con divisori tipografici, numeri tabular, niente card flottanti. Expertise: layout dominante 7col + 2 card impilate, icone lineari monocrome. Career: righe con colonna date stabile + chip "Attuale", formazione in 3 card. Contatti: pannello pine a due colonne, CTA "Raccontami cosa vuoi migliorare" + email diretta + LinkedIn/CV. Header: trasparente in cima, blur dopo scroll, CTA piena che appare oltre l'hero; menu mobile con Escape/backdrop/scroll-lock/focus restore. Niente form (scelta utente precedente confermata).
+- Ritratto: angoli neri rimossi via PIL (compositing circolare su bianco) per il crop editoriale.
 ## Implemented (2026-09-26, iter 5)
 - Ogni voce del menu ora apre una pagina dedicata oltre alla sezione in homepage: /it/competenze·/en/expertise, /it/progetti·/en/projects, /it|/en/nascitara, /it/esperienza·/en/experience, /it/profilo·/en/about, /it|/en/growth, /it/contatti·/en/contact.
 - Routing centralizzato in src/routes.js (slug localizzati), pagine via src/pages/SectionPage.jsx con SEO per pagina (titolo/description), link "← Home", voce attiva evidenziata in nav; switcher IT|EN preserva la pagina equivalente (es. /it/progetti ⇄ /en/projects). Lenis estratto in hooks/useLenis.js, SEO in lib/seo.js. llms.txt aggiornato. Verificati click nav, switch lingua, pagine dirette e back-home.

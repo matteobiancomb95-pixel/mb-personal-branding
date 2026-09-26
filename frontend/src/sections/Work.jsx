@@ -20,12 +20,12 @@ export const Work = ({ t, locale = "it" }) => {
 
   return (
     <section id="work" className="bg-alt" data-testid="work-section">
-      <div className="mx-auto max-w-7xl px-5 py-20 lg:px-10 lg:py-28">
+      <div className="wrap py-20 lg:py-32">
         <SectionHead eyebrow={t.work.eyebrow} title={t.work.title} id="work" />
 
         <Reveal className="mt-12">
           <article
-            className="card-lift overflow-hidden rounded-2xl border border-line border-l-4 border-l-coral bg-surface shadow-soft"
+            className="card-lift group overflow-hidden rounded-2xl border border-line bg-surface shadow-soft"
             data-testid="work-featured-nascitara"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -74,7 +74,7 @@ export const Work = ({ t, locale = "it" }) => {
                   height="960"
                   loading="lazy"
                   decoding="async"
-                  className="w-full max-w-lg rounded-2xl border border-line shadow-lift"
+                  className="w-full max-w-lg rounded-2xl border border-line shadow-lift transition-transform duration-300 ease-out group-hover:scale-[1.02]"
                 />
               </div>
             </div>

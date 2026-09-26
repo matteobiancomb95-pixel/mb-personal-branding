@@ -40,7 +40,7 @@ export default function SectionPage({ locale, section }) {
     <div className="min-h-screen bg-bg text-ink" data-testid={`page-${section}-${locale}`}>
       <Header t={t} locale={locale} />
       <main id="main">
-        <div className="mx-auto max-w-7xl px-5 pt-10 lg:px-10">
+        <div className="wrap pt-10">
           <Link
             to={homePath(locale)}
             data-testid="page-back-home"

@@ -3,7 +3,7 @@ import { copy } from "../i18n/copy";
 import { applySeo } from "../lib/seo";
 import { useLenis } from "../hooks/useLenis";
 import { Header } from "../components/Header";
-import { Marquee } from "../components/Marquee";
+import { FlowLine } from "../components/FlowLine";
 import { Hero } from "../sections/Hero";
 import { Impact } from "../sections/Impact";
 import { Expertise } from "../sections/Expertise";
@@ -30,10 +30,11 @@ export default function Home({ locale }) {
       <Header t={t} locale={locale} />
       <main id="main">
         <Hero t={t} />
-        <Marquee items={t.marquee} />
+        <FlowLine />
         <Impact t={t} />
         <Expertise t={t} />
         <Work t={t} locale={locale} />
+        <FlowLine coral />
         <NasciTara t={t} />
         <Career t={t} />
         <Principles t={t} />

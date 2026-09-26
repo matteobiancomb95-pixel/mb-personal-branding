@@ -3,7 +3,7 @@ import { Logo } from "../components/Logo";
 
 export const Footer = ({ t }) => (
   <footer className="border-t border-line bg-surface" data-testid="site-footer">
-    <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-5 py-12 sm:flex-row sm:items-center lg:px-10">
+    <div className="wrap flex flex-col items-start justify-between gap-8 py-12 sm:flex-row sm:items-center">
       <div className="flex items-center gap-3">
         <Logo size={36} testId="footer-logo" />
         <div>
@@ -21,7 +21,7 @@ export const Footer = ({ t }) => (
             if (window.__lenis) window.__lenis.scrollTo(0);
             else window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-mut transition-colors duration-200 hover:border-brand hover:text-brand"
+          className="flex h-11 w-11 items-center justify-center rounded-xl border border-line text-mut transition-colors duration-200 hover:border-brand hover:text-brand"
         >
           <ArrowUp size={17} />
         </button>

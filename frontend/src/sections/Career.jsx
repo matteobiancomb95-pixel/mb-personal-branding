@@ -3,55 +3,57 @@ import { Reveal, SectionHead } from "../components/Reveal";
 
 export const Career = ({ t }) => (
   <section id="career" className="bg-surface" data-testid="career-section">
-    <div className="mx-auto max-w-7xl px-5 py-20 lg:px-10 lg:py-28">
+    <div className="wrap py-20 lg:py-28">
       <SectionHead eyebrow={t.career.eyebrow} title={t.career.title} id="career" />
 
-      <div className="mt-12 grid grid-cols-1 gap-16 lg:grid-cols-12">
-        <ol className="relative col-span-12 space-y-10 border-l border-line-strong pl-8 lg:col-span-7" data-testid="career-timeline">
+      <Reveal className="mt-12">
+        <ol className="border-t border-line" data-testid="career-timeline">
           {t.career.items.map((item, i) => (
-            <li key={i} className="relative">
-              <Reveal>
-                <span
-                  className={`absolute -left-[41px] top-1.5 flex h-5 w-5 items-center justify-center rounded-full border-2 ${
-                    i === 0 ? "border-brand bg-brand" : "border-line-strong bg-surface"
-                  }`}
-                  aria-hidden="true"
-                >
-                  {i === 0 && <span className="h-1.5 w-1.5 rounded-full bg-onbrand" />}
-                </span>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand" data-testid={`career-period-${i}`}>
+            <li
+              key={i}
+              className="grid grid-cols-1 gap-1.5 border-b border-line py-6 lg:grid-cols-[170px_minmax(0,5fr)_minmax(0,6fr)] lg:items-baseline lg:gap-10 lg:py-7"
+              data-testid={`career-item-${i}`}
+            >
+              <div className="flex items-center gap-2.5">
+                {i === 0 && <span className="h-2 w-2 shrink-0 rounded-full bg-sage" aria-hidden="true" />}
+                <span className="tnum text-[13px] font-bold uppercase tracking-[0.14em] text-brand" data-testid={`career-period-${i}`}>
                   {item.period}
-                </p>
-                <h3 className="mt-2 font-display text-lg font-bold leading-snug text-ink">{item.org}</h3>
-                <p className="font-display text-base font-semibold text-mut">
+                </span>
+                {i === 0 && (
+                  <span className="rounded-md border border-line bg-alt px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-mut">
+                    {t.career.currentLabel}
+                  </span>
+                )}
+              </div>
+              <div>
+                <h3 className="font-display text-[17px] font-bold leading-snug text-ink">{item.org}</h3>
+                <p className="text-sm font-semibold text-mut">
                   {item.role} · {item.place}
                 </p>
-                <p className="mt-2 max-w-prose text-sm leading-relaxed text-mut">{item.note}</p>
-              </Reveal>
+              </div>
+              <p className="max-w-prose text-sm leading-relaxed text-mut lg:text-[15px]">{item.note}</p>
             </li>
           ))}
         </ol>
+      </Reveal>
 
-        <div className="col-span-12 lg:col-span-5">
-          <Reveal delay={0.15}>
-            <aside className="rounded-2xl border border-line bg-alt p-8" data-testid="education-box">
-              <h3 className="flex items-center gap-2.5 font-display text-lg font-bold text-ink">
-                <GraduationCap size={20} className="text-brand" />
-                {t.career.educationTitle}
-              </h3>
-              <ul className="mt-6 space-y-5">
-                {t.career.education.map((ed, i) => (
-                  <li key={i} className="border-b border-line pb-5 last:border-0 last:pb-0">
-                    <p className="font-display font-bold text-ink">{ed.title}</p>
-                    <p className="text-sm text-mut">{ed.org}</p>
-                    <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-mut">{ed.period}</p>
-                  </li>
-                ))}
-              </ul>
-            </aside>
-          </Reveal>
+      <Reveal delay={0.1}>
+        <div className="mt-14" data-testid="education-box">
+          <h3 className="flex items-center gap-2.5 font-display text-lg font-bold text-ink">
+            <GraduationCap size={20} className="text-brand" aria-hidden="true" />
+            {t.career.educationTitle}
+          </h3>
+          <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {t.career.education.map((ed, i) => (
+              <li key={i} className="rounded-xl border border-line bg-alt p-5">
+                <p className="font-display text-[15px] font-bold text-ink">{ed.title}</p>
+                <p className="mt-1 text-sm leading-snug text-mut">{ed.org}</p>
+                <p className="tnum mt-2 text-[12px] font-semibold uppercase tracking-wider text-mut">{ed.period}</p>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+      </Reveal>
     </div>
   </section>
 );

@@ -3,7 +3,7 @@ import { Reveal, SectionHead } from "../components/Reveal";
 
 export const Growth = ({ t }) => (
   <section id="growth" className="bg-bg" data-testid="growth-section">
-    <div className="mx-auto max-w-7xl px-5 py-20 lg:px-10 lg:py-28">
+    <div className="wrap py-20 lg:py-28">
       <SectionHead eyebrow={t.growth.eyebrow} title={t.growth.title} id="growth" />
 
       <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-12">

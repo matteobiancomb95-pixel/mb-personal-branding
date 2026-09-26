@@ -27,7 +27,7 @@ export const Logo = ({ size = 40, testId = "logo-monogram" }) => {
       aria-hidden="true"
       className="shrink-0"
     >
-      <rect width="64" height="64" rx="14" className="fill-pine" style={{ fill: "#173137" }} />
+      <rect width="64" height="64" rx="14" style={{ fill: "#173137" }} />
       {paths.map((p, i) =>
         animate ? (
           <motion.path
@@ -40,7 +40,7 @@ export const Logo = ({ size = 40, testId = "logo-monogram" }) => {
             fill="none"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
-            transition={{ duration: 1.1, delay: 0.15 + i * 0.35, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.55, delay: 0.1 + i * 0.22, ease: [0.16, 1, 0.3, 1] }}
           />
         ) : (
           <path
