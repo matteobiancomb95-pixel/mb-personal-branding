@@ -9,20 +9,25 @@ import { Header } from "../components/Header";
 import { Footer } from "../sections/Footer";
 import { Reveal } from "../components/Reveal";
 
-const BarsChart = ({ title, bars }) => (
-  <div data-testid="chart-bars">
-    <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-mut">{title}</p>
-    <svg viewBox="0 0 320 190" className="mt-4 w-full" role="img" aria-label={title}>
-      <line x1="24" y1="150" x2="296" y2="150" stroke="var(--line-strong)" strokeWidth="1" />
-      <rect x="70" y="90" width="64" height="60" rx="6" fill="var(--sage)" />
-      <rect x="186" y="30" width="64" height="120" rx="6" fill="var(--brand)" />
-      <text x="102" y="82" textAnchor="middle" fill="var(--mut)" fontSize="13" fontWeight="600">100</text>
-      <text x="218" y="22" textAnchor="middle" fill="var(--brand)" fontSize="13" fontWeight="700">200 (+100%)</text>
-      <text x="102" y="170" textAnchor="middle" fill="var(--mut)" fontSize="12" fontWeight="600">{bars[0]}</text>
-      <text x="218" y="170" textAnchor="middle" fill="var(--mut)" fontSize="12" fontWeight="600">{bars[1]}</text>
-    </svg>
-  </div>
-);
+const BarsChart = ({ title, bars, values, endLabel }) => {
+  const scale = 120 / values[1];
+  const h1 = Math.round(values[0] * scale);
+  const h2 = Math.round(values[1] * scale);
+  return (
+    <div data-testid="chart-bars">
+      <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-mut">{title}</p>
+      <svg viewBox="0 0 320 190" className="mt-4 w-full" role="img" aria-label={title}>
+        <line x1="24" y1="150" x2="296" y2="150" stroke="var(--line-strong)" strokeWidth="1" />
+        <rect x="70" y={150 - h1} width="64" height={h1} rx="6" fill="var(--sage)" />
+        <rect x="186" y={150 - h2} width="64" height={h2} rx="6" fill="var(--brand)" />
+        <text x="102" y={150 - h1 - 8} textAnchor="middle" fill="var(--mut)" fontSize="13" fontWeight="600">{values[0]}</text>
+        <text x="218" y={150 - h2 - 8} textAnchor="middle" fill="var(--brand)" fontSize="13" fontWeight="700">{`${values[1]} (${endLabel})`}</text>
+        <text x="102" y="170" textAnchor="middle" fill="var(--mut)" fontSize="12" fontWeight="600">{bars[0]}</text>
+        <text x="218" y="170" textAnchor="middle" fill="var(--mut)" fontSize="12" fontWeight="600">{bars[1]}</text>
+      </svg>
+    </div>
+  );
+};
 
 const StepFlow = ({ steps }) => (
   <div data-testid="chart-steps">
@@ -154,7 +159,7 @@ export default function ProjectPage({ locale, project }) {
                 )}
 
                 <div className="mt-7">
-                  {p.chart === "bars" && <BarsChart title={p.chartTitle} bars={p.chartBars} />}
+                  {p.chart === "bars" && <BarsChart title={p.chartTitle} bars={p.chartBars} values={p.chartValues} endLabel={p.chartEnd} />}
                   {p.chart === "steps" && <StepFlow steps={p.chartSteps} />}
                   {p.chart === "journey" && <JourneyFlow stages={p.chartStages} />}
                 </div>

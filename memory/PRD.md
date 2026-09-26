@@ -43,6 +43,9 @@
 - Dominio di produzione: appena confermato aggiungere canonical, og:url, og:image (1200×630), hreflang reciproci, sitemap.xml (skill farm-seo-setup).
 - Dopo il deploy: attivare il toggle "Enable Search Engine Crawling and Optimisation" e riverificare sul dominio live.
 
+## Implemented (2026-09-26, iter 8)
+- Pagina dettaglio Spoki (/it/progetti/spoki · /en/projects/spoki): automazioni conversazionali WhatsApp Business API, racconto del round Series A da €5,5M e crescita ricavi 3x YoY — formulati come risultati aziendali con contributo nel team (mai come merito individuale). Grafico a barre generalizzato (chartValues/chartEnd nel copy). Card Spoki aggiunta in Selected Work (griglia a 4). Fix rendering etichetta SVG (template string singola).
+
 ## Implemented (2026-09-26, iter 7)
 - Pagine dettaglio progetto: /it/progetti/{coccolebimbi,despar-centro-sud,roche} + /en/projects/... con SEO propria, logo azienda, ruolo, attività, blocco risultati e grafici SVG onesti (barre YoY quick commerce per Despar, stepper Analisi→Go-live per Roche, journey stages per CoccoleBimbi con badge "In corso"). Switcher lingua preserva la pagina progetto.
 - Nuovo progetto CoccoleBimbi (strategia CRM, targeting, journey futuri genitori) in Selected Work come card cliccabile con badge "In corso".

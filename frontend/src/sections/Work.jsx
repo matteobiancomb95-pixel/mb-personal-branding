@@ -81,7 +81,7 @@ export const Work = ({ t, locale = "it" }) => {
           </article>
         </Reveal>
 
-        <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {t.work.small.map((p, i) => (
             <Reveal key={p.key} delay={0.06 * (i + 1)} className="h-full">
               <Link

@@ -11,6 +11,7 @@ export const SECTIONS = {
 export const PROJECTS = {
   coccolebimbi: "coccolebimbi",
   despar: "despar-centro-sud",
+  spoki: "spoki",
   roche: "roche",
 };
 
