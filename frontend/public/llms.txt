@@ -4,9 +4,15 @@
 
 ## Pages
 
-- / (Italian, default): homepage with hero, impact strip, expertise, selected work, NasciTara vision, career timeline, operating principles, about and contact.
-- /it: same homepage, Italian locale.
+- / (Italian, default) and /it: homepage with hero, impact strip, expertise, selected work, NasciTara vision, career timeline, operating principles, about, growth and contact.
 - /en: same homepage, English locale.
+- /it/competenze · /en/expertise — CRM & lifecycle, automation & integrations, product & project delivery.
+- /it/progetti · /en/projects — selected work: NasciTara (featured), Despar Centro Sud loyalty app, Roche Salesforce Lightning migration.
+- /it/nascitara · /en/nascitara — NasciTara case study: present features, future vision, medical disclaimer.
+- /it/esperienza · /en/experience — career timeline and education.
+- /it/profilo · /en/about — biography and toolset.
+- /it/growth · /en/growth — business & revenue model editorial with the Maiora / Despar Centro Sud example.
+- /it/contatti · /en/contact — email and LinkedIn contact.
 
 ## Highlights
 

@@ -43,6 +43,9 @@
 - Dominio di produzione: appena confermato aggiungere canonical, og:url, og:image (1200×630), hreflang reciproci, sitemap.xml (skill farm-seo-setup).
 - Dopo il deploy: attivare il toggle "Enable Search Engine Crawling and Optimisation" e riverificare sul dominio live.
 
+## Implemented (2026-09-26, iter 5)
+- Ogni voce del menu ora apre una pagina dedicata oltre alla sezione in homepage: /it/competenze·/en/expertise, /it/progetti·/en/projects, /it|/en/nascitara, /it/esperienza·/en/experience, /it/profilo·/en/about, /it|/en/growth, /it/contatti·/en/contact.
+- Routing centralizzato in src/routes.js (slug localizzati), pagine via src/pages/SectionPage.jsx con SEO per pagina (titolo/description), link "← Home", voce attiva evidenziata in nav; switcher IT|EN preserva la pagina equivalente (es. /it/progetti ⇄ /en/projects). Lenis estratto in hooks/useLenis.js, SEO in lib/seo.js. llms.txt aggiornato. Verificati click nav, switch lingua, pagine dirette e back-home.
 ## Implemented (2026-09-26, iter 4)
 - Ritratto ridotto (max ~360px desktop) su richiesta utente.
 - Nuova sezione editoriale "Growth & Business Model" (#growth, tra Profilo e Contatti, voce in nav): narrativa su startup/Business Model Canvas/growth strategy + card "Esempio concreto" Maiora/Despar con metriche reali (€2M, ~20x MROI, +100% YoY) e leve attivate. Bilingue IT/EN.

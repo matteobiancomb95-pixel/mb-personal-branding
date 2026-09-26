@@ -14,6 +14,15 @@ export const copy = {
         "Progetto ecosistemi CRM, automazioni e prodotti digitali che trasformano dati e processi complessi in esperienze più semplici e risultati misurabili.",
       ogLocale: "it_IT",
     },
+    pageSeo: {
+      expertise: { title: "Competenze — Matteo Bianco", description: "Strategie CRM, automazioni, integrazioni e delivery di prodotti digitali: le tre aree con cui progetto sistemi che funzionano." },
+      work: { title: "Progetti — Matteo Bianco", description: "NasciTara, la loyalty app di Despar Centro Sud e la migrazione Salesforce Lightning in Roche: progetti che raccontano il metodo." },
+      nascitara: { title: "NasciTara — Case study | Matteo Bianco", description: "Da un problema umano a un prodotto digitale: la web app che combina le ecografie per stimare peso, lunghezza e percentile." },
+      career: { title: "Esperienza — Matteo Bianco", description: "Sei anni tra CRM, automazione e delivery: CoccoleBimbi, Maiora/Despar Centro Sud, Spoki, Roche, Deloitte, Reale Mutua." },
+      about: { title: "Profilo — Matteo Bianco", description: "CRM & Tech Project Manager, esperto di business e revenue model, builder di prodotti digitali human-centered." },
+      growth: { title: "Growth & Business Model — Matteo Bianco", description: "Startup, Business Model Canvas, strategie di growth e marketing strategy: dove i sistemi incontrano il fatturato." },
+      contact: { title: "Contatti — Matteo Bianco", description: "Hai un processo da semplificare o un prodotto da validare? Scrivimi: rispondo personalmente a ogni proposta." },
+    },
     nav: {
       expertise: "Competenze",
       work: "Progetti",
@@ -235,6 +244,15 @@ export const copy = {
       description:
         "I design CRM ecosystems, automations and digital products that turn complex data and processes into simpler experiences and measurable outcomes.",
       ogLocale: "en_US",
+    },
+    pageSeo: {
+      expertise: { title: "Expertise — Matteo Bianco", description: "CRM strategy, automations, integrations and digital product delivery: the three areas I use to design systems that work." },
+      work: { title: "Projects — Matteo Bianco", description: "NasciTara, the Despar Centro Sud loyalty app and the Roche Salesforce Lightning migration: projects that show the method." },
+      nascitara: { title: "NasciTara — Case study | Matteo Bianco", description: "From a human problem to a digital product: the web app that combines ultrasounds to estimate weight, length and percentile." },
+      career: { title: "Experience — Matteo Bianco", description: "Six years across CRM, automation and delivery: CoccoleBimbi, Maiora/Despar Centro Sud, Spoki, Roche, Deloitte, Reale Mutua." },
+      about: { title: "About — Matteo Bianco", description: "CRM & Tech Project Manager, experienced in business and revenue models, builder of human-centered digital products." },
+      growth: { title: "Growth & Business Model — Matteo Bianco", description: "Startups, Business Model Canvas, growth strategies and marketing strategy: where systems meet revenue." },
+      contact: { title: "Contact — Matteo Bianco", description: "Have a process to simplify or a product to validate? Write to me: I personally reply to every proposal." },
     },
     nav: {
       expertise: "Expertise",

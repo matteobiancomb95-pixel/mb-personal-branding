@@ -1,23 +1,15 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { Logo } from "./Logo";
-
-const scrollToHash = (hash) => {
-  const el = document.querySelector(hash);
-  if (!el) return;
-  if (window.__lenis) {
-    window.__lenis.scrollTo(el, { offset: -84 });
-  } else {
-    el.scrollIntoView({ behavior: "smooth" });
-  }
-};
+import { SECTIONS, equivalentPath, homePath, sectionPath } from "../routes";
 
 export const Header = ({ t, locale }) => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [dark, setDark] = useState(() => document.documentElement.classList.contains("dark"));
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -26,6 +18,10 @@ export const Header = ({ t, locale }) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
+
   const toggleTheme = () => {
     const next = !dark;
     setDark(next);
@@ -33,21 +29,16 @@ export const Header = ({ t, locale }) => {
     localStorage.setItem("mb-theme", next ? "dark" : "light");
   };
 
-  const links = [
-    { hash: "#expertise", label: t.nav.expertise },
-    { hash: "#work", label: t.nav.work },
-    { hash: "#nascitara", label: t.nav.nascitara },
-    { hash: "#career", label: t.nav.career },
-    { hash: "#about", label: t.nav.about },
-    { hash: "#growth", label: t.nav.growth },
-    { hash: "#contact", label: t.nav.contact },
-  ];
+  const links = Object.keys(SECTIONS).map((key) => ({
+    key,
+    label: t.nav[key],
+    to: sectionPath(key, locale),
+  }));
 
-  const anchor = (hash) => (e) => {
-    e.preventDefault();
-    setOpen(false);
-    scrollToHash(hash);
-  };
+  const linkClass = (to) =>
+    `link-sweep text-sm font-semibold transition-colors duration-200 hover:text-ink ${
+      location.pathname === to ? "text-brand" : "text-mut"
+    }`;
 
   return (
     <header
@@ -61,7 +52,7 @@ export const Header = ({ t, locale }) => {
       </a>
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 lg:px-10">
         <Link
-          to={locale === "en" ? "/en" : "/"}
+          to={homePath(locale)}
           className="flex items-center gap-3"
           data-testid="nav-logo-link"
           aria-label="Matteo Bianco"
@@ -70,17 +61,11 @@ export const Header = ({ t, locale }) => {
           <span className="font-display text-lg font-bold tracking-tight text-ink">Matteo Bianco</span>
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary" data-testid="desktop-nav">
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary" data-testid="desktop-nav">
           {links.map((l) => (
-            <a
-              key={l.hash}
-              href={l.hash}
-              onClick={anchor(l.hash)}
-              className="link-sweep text-sm font-semibold text-mut transition-colors duration-200 hover:text-ink"
-              data-testid={`nav-link-${l.hash.slice(1)}`}
-            >
+            <Link key={l.key} to={l.to} className={linkClass(l.to)} data-testid={`nav-link-${l.key}`}>
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -92,8 +77,9 @@ export const Header = ({ t, locale }) => {
             aria-label="Language"
           >
             <Link
-              to="/"
+              to={equivalentPath(location.pathname, "it")}
               data-testid="lang-switch-it"
+              aria-current={locale === "it" ? "true" : undefined}
               className={`rounded-full px-3 py-1.5 transition-colors duration-200 ${
                 locale === "it" ? "bg-brand text-onbrand" : "text-mut hover:text-ink"
               }`}
@@ -101,8 +87,9 @@ export const Header = ({ t, locale }) => {
               IT
             </Link>
             <Link
-              to="/en"
+              to={equivalentPath(location.pathname, "en")}
               data-testid="lang-switch-en"
+              aria-current={locale === "en" ? "true" : undefined}
               className={`rounded-full px-3 py-1.5 transition-colors duration-200 ${
                 locale === "en" ? "bg-brand text-onbrand" : "text-mut hover:text-ink"
               }`}
@@ -145,15 +132,16 @@ export const Header = ({ t, locale }) => {
           >
             <div className="flex flex-col px-5 py-4">
               {links.map((l) => (
-                <a
-                  key={l.hash}
-                  href={l.hash}
-                  onClick={anchor(l.hash)}
-                  className="border-b border-line py-4 font-display text-lg font-semibold text-ink last:border-0"
-                  data-testid={`mobile-nav-link-${l.hash.slice(1)}`}
+                <Link
+                  key={l.key}
+                  to={l.to}
+                  className={`border-b border-line py-4 font-display text-lg font-semibold last:border-0 ${
+                    location.pathname === l.to ? "text-brand" : "text-ink"
+                  }`}
+                  data-testid={`mobile-nav-link-${l.key}`}
                 >
                   {l.label}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.nav>
