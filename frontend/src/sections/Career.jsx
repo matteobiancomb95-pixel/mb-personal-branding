@@ -1,4 +1,4 @@
-import { GraduationCap } from "lucide-react";
+import { BadgeCheck, GraduationCap } from "lucide-react";
 import { logoSrc } from "../i18n/copy";
 import { Reveal, SectionHead } from "../components/Reveal";
 
@@ -82,6 +82,26 @@ export const Career = ({ t }) => (
                 <p className="font-display text-[15px] font-bold text-ink">{ed.title}</p>
                 <p className="mt-1 text-sm leading-snug text-mut">{ed.org}</p>
                 <p className="tnum mt-2 text-[12px] font-semibold uppercase tracking-wider text-mut">{ed.period}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Reveal>
+
+      <Reveal delay={0.15}>
+        <div className="mt-10" data-testid="certifications-box">
+          <h3 className="flex items-center gap-2.5 font-display text-lg font-bold text-ink">
+            <BadgeCheck size={20} className="text-brand" aria-hidden="true" />
+            {t.career.certTitle}
+          </h3>
+          <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {t.career.certs.map((cert) => (
+              <li
+                key={cert}
+                className="flex items-start gap-2.5 rounded-xl border border-line bg-alt px-4 py-3 text-sm font-semibold leading-snug text-mut"
+              >
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-sage" aria-hidden="true" />
+                {cert}
               </li>
             ))}
           </ul>

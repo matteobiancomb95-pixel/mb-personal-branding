@@ -43,6 +43,10 @@
 - Dominio di produzione: appena confermato aggiungere canonical, og:url, og:image (1200×630), hreflang reciproci, sitemap.xml (skill farm-seo-setup).
 - Dopo il deploy: attivare il toggle "Enable Search Engine Crawling and Optimisation" e riverificare sul dominio live.
 
+## Implemented (2026-09-26, iter 10)
+- Pagina Despar arricchita dal CV: partnership Just Eat end-to-end (negoziazione, integrazione tecnica, go-to-market, €10K co-marketing come quarta stat) e migrazione CRM verso SAP Emarsys (negoziazione → firma → avvio rollout). Bilingue.
+- Sezione Esperienza: nuovo blocco "Certificazioni e formazione continua" con Ninja Academy 2025, DeepLearning.AI 2026 (LLM with JAX), COBIT5 Foundation 2022, Scrum Fundamentals 2021.
+
 ## Implemented (2026-09-26, iter 9)
 - Sezione "Strumenti con cui lavoro" (Profilo) espansa con TUTTI i tool del CV, organizzati in 6 gruppi: CRM & CDP (Salesforce 3 cloud, Dynamics 365, Loyal Guru, ActiveCampaign, Connectif, SAP Emarsys), Automazione (Zapier, Make, n8n, Postman, API & Webhook, ServiceNow), Data & Analytics (SQL, Python, Tableau, Power BI, SAP BO, Excel, GA, Semrush, Gretl), Omnichannel (WhatsApp API, DEM, SMS, Push, Shopify, WordPress, Qualtrics), Project & Process (Agile/Scrum, UAT, ARIS, Notion, MS Project), AI (LLM & RAG, Custom AI Assistants, Agentic AI: Codex, Claude Code, Cursor). Bilingue.
 

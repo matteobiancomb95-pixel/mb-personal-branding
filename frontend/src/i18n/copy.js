@@ -216,6 +216,13 @@ export const copy = {
         { title: "Erasmus", org: "Vilnius Gediminas Technical University", period: "2019 — 2020" },
         { title: "Laurea Triennale", org: "Politecnico di Bari", period: "2014 — 2018" },
       ],
+      certTitle: "Certificazioni e formazione continua",
+      certs: [
+        "Digital Marketing & ADV (SEO, SEM, Meta e Google Ads) — Ninja Academy · 2025",
+        "Build and Train an LLM with JAX — DeepLearning.AI · 2026",
+        "COBIT5 Foundation — PeopleCert · 2022",
+        "Scrum Fundamentals Certified — SCRUMstudy · 2021",
+      ],
     },
     principles: {
       eyebrow: "Principi operativi",
@@ -327,6 +334,8 @@ export const copy = {
           "Progettazione dei customer journey omnicanale",
           "Decisioni data-driven su campagne e quick commerce",
           "Lancio del servizio Glovo Quick Commerce",
+          "Lancio end-to-end della partnership Just Eat: negoziazione commerciale, integrazione tecnica e go-to-market",
+          "Migrazione della piattaforma CRM verso SAP Emarsys: dalla negoziazione alla firma del contratto, con avvio del rollout",
         ],
         outcomeTitle: "Risultati",
         outcomeNote: "Risultati raggiunti insieme ai team marketing, e-commerce e operations di Maiora.",
@@ -339,6 +348,7 @@ export const copy = {
           { value: "€2M", label: "vendite incrementali dal programma loyalty e CRM" },
           { value: "~20x", label: "ritorno sull'investimento marketing (MROI)" },
           { value: "+100%", label: "crescita dei ricavi quick commerce YoY" },
+          { value: "€10K", label: "di investimento co-marketing ottenuto con la partnership Just Eat" },
         ],
       },
       spoki: {
@@ -615,6 +625,13 @@ export const copy = {
         { title: "Erasmus", org: "Vilnius Gediminas Technical University", period: "2019 — 2020" },
         { title: "Bachelor's Degree", org: "Politecnico di Bari", period: "2014 — 2018" },
       ],
+      certTitle: "Certifications & continuous learning",
+      certs: [
+        "Digital Marketing & ADV (SEO, SEM, Meta & Google Ads) — Ninja Academy · 2025",
+        "Build and Train an LLM with JAX — DeepLearning.AI · 2026",
+        "COBIT5 Foundation — PeopleCert · 2022",
+        "Scrum Fundamentals Certified — SCRUMstudy · 2021",
+      ],
     },
     principles: {
       eyebrow: "Operating principles",
@@ -726,6 +743,8 @@ export const copy = {
           "Omnichannel customer journey design",
           "Data-driven decisions on campaigns and quick commerce",
           "Launch of the Glovo Quick Commerce service",
+          "End-to-end launch of the Just Eat partnership: commercial negotiation, technical integration and go-to-market",
+          "CRM platform migration to SAP Emarsys: from commercial negotiation to contract signature and rollout kickoff",
         ],
         outcomeTitle: "Outcomes",
         outcomeNote: "Results achieved together with Maiora's marketing, e-commerce and operations teams.",
@@ -738,6 +757,7 @@ export const copy = {
           { value: "€2M", label: "incremental sales from the loyalty & CRM programme" },
           { value: "~20x", label: "return on marketing investment (MROI)" },
           { value: "+100%", label: "quick-commerce revenue growth YoY" },
+          { value: "€10K", label: "co-marketing investment secured with the Just Eat partnership" },
         ],
       },
       spoki: {
