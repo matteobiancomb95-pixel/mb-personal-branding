@@ -136,7 +136,7 @@ export const Hero = ({ t }) => {
           onMouseLeave={onLeave}
           style={{ perspective: 900 }}
         >
-          <motion.div style={reduce ? {} : { rotateX: rx, rotateY: ry }} className="will-change-transform">
+          <motion.div style={reduce ? {} : { rotateX: rx, rotateY: ry }} className="mx-auto w-full max-w-[260px] will-change-transform sm:max-w-[320px] lg:max-w-[360px]">
             <div
               className="relative rounded-2xl border border-line bg-surface p-5 shadow-lift lg:p-7"
               data-testid="portrait-frame"
