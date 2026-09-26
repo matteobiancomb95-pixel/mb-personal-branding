@@ -1,0 +1,21 @@
+# Matteo Bianco — Personal branding & portfolio
+
+> Matteo Bianco is a CRM & Tech Project Manager and AI & Automation Builder with around six years of experience across retail, fashion, FMCG, technology, pharma and insurance. The site presents his positioning ("Connected systems. Human outcomes."), measurable impact, expertise areas, selected projects, the NasciTara case study, career journey and contact details.
+
+## Pages
+
+- / (Italian, default): homepage with hero, impact strip, expertise, selected work, NasciTara vision, career timeline, operating principles, about and contact.
+- /it: same homepage, Italian locale.
+- /en: same homepage, English locale.
+
+## Highlights
+
+- €2M incremental sales and ~20x MROI on the Maiora / Despar Centro Sud loyalty & CRM programme.
+- +100% YoY quick-commerce revenue with the Glovo Quick Commerce launch at Maiora.
+- Italian go-live of the Salesforce Lightning migration at Roche.
+- Coordination of three RPA bots for national tenders at Deloitte / Johnson & Johnson MedTech.
+- NasciTara: a personal web app that combines ultrasound data to estimate fetal weight, length and percentile (Hadlock model). NasciTara is for informational purposes and does not replace professional medical advice. Live at https://nascitara.vercel.app/.
+
+## Contact
+
+- Email: matteobianco.mb95@gmail.com

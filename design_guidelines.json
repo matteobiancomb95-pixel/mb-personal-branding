@@ -1,0 +1,211 @@
+{
+  "brand_identity": {
+    "name": "Matteo Bianco",
+    "role_it": "CRM & Tech Project Manager / AI & Automation Builder",
+    "role_en": "CRM & Tech Project Manager / AI & Automation Builder",
+    "tagline_it": "Sistemi connessi. Risultati umani.",
+    "tagline_en": "Connected systems. Human outcomes.",
+    "email": "matteobianco.mb95@gmail.com",
+    "linkedin_placeholder": "https://linkedin.com/in/matteobianco-placeholder",
+    "nascitara_url": "https://nascitara.vercel.app/"
+  },
+  "theme_and_colors": {
+    "light_mode": {
+      "page_background": "#F7F5EF",
+      "card_surface": "#FFFFFF",
+      "alt_section": "#E8F2EE",
+      "text_dark": "#173137",
+      "text_muted": "#5B6F70",
+      "primary_cta_links": "#0D5C63",
+      "primary_hover": "#08474D",
+      "sparing_accent": "#86BFA8",
+      "human_coral_accent": "#BE4F39",
+      "border_subtle": "rgba(23, 49, 55, 0.12)",
+      "border_strong": "rgba(23, 49, 55, 0.25)"
+    },
+    "dark_mode": {
+      "page_background": "#102328",
+      "card_surface": "#173137",
+      "elevated_surface": "#1D3C42",
+      "text_main": "#F4F2EC",
+      "text_muted": "#B9CAC8",
+      "primary": "#8BC8BD",
+      "primary_hover": "#A2D8CE",
+      "coral": "#F08A75",
+      "border_subtle": "rgba(244, 242, 236, 0.12)",
+      "border_strong": "rgba(244, 242, 236, 0.22)"
+    },
+    "forbidden_styles": [
+      "NO purple gradients (#7351B7 strictly banned)",
+      "NO neon glows or high-saturation cyberpunk effects",
+      "NO organic liquid/decorative blobs or glassmorphism grain overload",
+      "NO rainbow/multi-color gradients",
+      "NO full transparent backgrounds on headers or sticky menus"
+    ]
+  },
+  "typography": {
+    "font_family_display": "Manrope, sans-serif",
+    "font_family_body": "Source Sans 3, sans-serif",
+    "scale": {
+      "hero_desktop": "text-5xl lg:text-7xl (56px-72px), font-extrabold, tracking-tight",
+      "hero_mobile": "text-4xl (40px-48px), font-bold, tracking-tight",
+      "section_titles": "text-3xl lg:text-4xl (32px-44px), font-bold, tracking-tight",
+      "card_titles": "text-xl lg:text-2xl (20px-24px), font-semibold",
+      "body": "text-base lg:text-lg (17px-18px), line-height 1.6 (leading-relaxed)",
+      "prose_max_width": "max-w-prose (65ch - 72ch)",
+      "labels": "text-xs font-semibold tracking-wider uppercase"
+    }
+  },
+  "logo_and_icons": {
+    "logo_spec": "Inline SVG monogram 'MB' composed of two geometric connected architectural modules, sober and abstract. Strictly NO brain, circuit, rocket, or robot icons.",
+    "favicon_spec": "Clean geometric MB monogram rendered on #173137 background with #8BC8BD / #0D5C63 lines.",
+    "icon_library": "lucide-react (clean duotone or line variant for interface indicators)"
+  },
+  "motion_and_effects": {
+    "lenis_smooth_scroll": "Enabled for fluid, weighted momentum scrolling across all browsers",
+    "transitions": "Restrained 180ms - 260ms ease-out transitions for buttons, links, and mode shifts",
+    "reveals": "8px - 16px vertical slide + opacity fade-in via Framer Motion with staggerChildren 0.08s",
+    "hero_entry": "Kinetic line-by-line masked text reveal for hero heading + subtle line-drawing SVG animation for MB logo",
+    "prefers_reduced_motion": "All motion hooks must check window.matchMedia('(prefers-reduced-motion: reduce)') and fallback to instant opacity 1",
+    "shadows": "Restrained 1px alpha border + subtle dual ambient shadow (shadow-sm to shadow-md)",
+    "marquee": "Slow, elegant single editorial ribbon marquee with low contrast text and massive gaps between keywords"
+  },
+  "structure_and_sections": [
+    {
+      "section_id": "header",
+      "layout": "Sticky navigation bar with backdrop-blur-md bg-white/85 dark:bg-[#102328]/85 border-b border-border_subtle z-50",
+      "components": [
+        "Monogram Logo MB (links to top)",
+        "Desktop Links: Impact, Expertise, Work, Vision, Career, Principles, About, Contact",
+        "Language Switcher Toggle: [IT | EN]",
+        "Theme Switcher Toggle: [Light | Dark]",
+        "Mobile Sheet/Drawer Menu for responsive viewports"
+      ]
+    },
+    {
+      "section_id": "hero",
+      "layout": "Asymmetric Bento Grid (col-span-12 md:col-span-7 left for text copy & availability badge; col-span-12 md:col-span-5 right for framed PORTRAIT_TODO placeholder)",
+      "key_elements": [
+        "Availability Badge: 'Available for Strategic Projects & AI Implementation'",
+        "Main Headline: 'Sistemi connessi. Risultati umani.' / 'Connected systems. Human outcomes.'",
+        "Subheading detailing role as CRM & Tech Project Manager / AI & Automation Builder",
+        "Primary CTAs: 'Explore Impact & Work' and 'Get in Touch'",
+        "Framed PORTRAIT_TODO image box with elegant 1px border and monochrome architectural overlay"
+      ]
+    },
+    {
+      "section_id": "impact_strip",
+      "layout": "High Density Grid (4 equal columns on desktop, 2x2 on tablet, 1 col on mobile) with tight subtle borders and solid surfaces",
+      "proof_points": [
+        "€2M+ Incremental Sales Generated",
+        "~20x Marketing ROI Achieved",
+        "+100% YoY Quick-Commerce Growth",
+        "6+ Years Systems & CRM Engineering"
+      ]
+    },
+    {
+      "section_id": "expertise",
+      "layout": "Editorial Asymmetric Layout (2 large cards + 1 wide span card)",
+      "cards": [
+        {
+          "title": "CRM & Customer Lifecycle",
+          "details": "Salesforce Lightning, Customer Journey Mapping, Segmentation & Automated Retention Strategies."
+        },
+        {
+          "title": "Automation & AI Integrations",
+          "details": "Custom Workflows, LLM Agent Orchestration, Webhooks, API Architecture & Process Optimization."
+        },
+        {
+          "title": "Product & Tech Delivery",
+          "details": "Cross-functional Leadership, Agile/Scrum Execution, Quick-Commerce Platforms & Tech Audits."
+        }
+      ]
+    },
+    {
+      "section_id": "selected_work",
+      "layout": "Bento Grid featuring 1 dominant highlighted card (NasciTara) + 2 standard project cards",
+      "projects": [
+        {
+          "title": "NasciTara",
+          "badge": "Flagship Case Study",
+          "accent_rule": "Human Coral (#BE4F39) badge and border accent strictly reserved for NasciTara",
+          "screenshot_placeholder": "NASCITARA_SCREEN_TODO",
+          "description": "AI-driven maternal and prenatal care guidance system connecting medical protocols with empathetic human communication.",
+          "external_link": "https://nascitara.vercel.app/"
+        },
+        {
+          "title": "Despar Loyalty App",
+          "description": "Comprehensive customer loyalty & omnichannel quick-commerce app scaling engagement and sales conversion."
+        },
+        {
+          "title": "Roche Salesforce Lightning Migration",
+          "description": "Enterprise-grade CRM migration, process automation, and platform integration for health-tech workflow efficiency."
+        }
+      ]
+    },
+    {
+      "section_id": "nascitara_vision",
+      "layout": "Side-by-side comparison grid (Present Reality vs Future Vision) + Mandatory Medical Disclaimer banner",
+      "disclaimer_text_it": "AVVISO MEDICO: NasciTara è un sistema di supporto informativo e non sostituisce in alcun modo il parere, la diagnosi o il trattamento di un medico professionista.",
+      "disclaimer_text_en": "MEDICAL DISCLAIMER: NasciTara is an informational support system and does not replace professional medical advice, diagnosis, or treatment."
+    },
+    {
+      "section_id": "career_journey",
+      "layout": "Vertical editorial timeline with custom node markers for 6 career roles, followed by a compact education box",
+      "timeline_items": "6 key roles detailing milestones in CRM, Tech PM, and Automation + Degree & Certifications"
+    },
+    {
+      "section_id": "operating_principles",
+      "layout": "Typographic structured list with large numbers (01 - 04) and high contrast statement blocks",
+      "principles": [
+        "01. Data before assumptions",
+        "02. Automate what repeats",
+        "03. Design for adoption",
+        "04. Ship, measure, improve"
+      ]
+    },
+    {
+      "section_id": "about",
+      "layout": "Editorial 2-column layout (First-person biography left, technical stack tags & philosophy right)",
+      "prose_focus": "Bridge between technical systems efficiency and human-centered business outcomes."
+    },
+    {
+      "section_id": "contact",
+      "layout": "High-impact closing statement card. Strictly NO contact form.",
+      "content": [
+        "Closing Statement: Ready to connect your systems and elevate human outcomes?",
+        "Direct Email Button: matteobianco.mb95@gmail.com",
+        "LinkedIn Button: LINKEDIN_URL"
+      ]
+    },
+    {
+      "section_id": "footer",
+      "layout": "Clean editorial footer with monogram MB, copyright, locale navigation shortcuts, and top-scroll button"
+    }
+  ],
+  "testing_and_attributes": {
+    "rule": "All interactive elements, buttons, inputs, links, language switchers, and dark mode toggles MUST contain descriptive kebab-case data-testid attributes.",
+    "examples": [
+      "data-testid='nav-logo-link'",
+      "data-testid='lang-switcher-toggle'",
+      "data-testid='theme-toggle-button'",
+      "data-testid='hero-cta-contact'",
+      "data-testid='nascitara-external-link'",
+      "data-testid='contact-email-button'",
+      "data-testid='contact-linkedin-button'"
+    ]
+  },
+  "curated_media_assets": [
+    {
+      "category": "abstract_background_texture",
+      "url": "https://images.unsplash.com/photo-1688494963827-9f9dc1c51bd0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwYWJzdHJhY3QlMjBhcmNoaXRlY3R1cmUlMjBsaW5lJTIwZGFyayUyMHRlYWwlMjB0ZXh0dXJlfGVufDB8fHx8MTc5MDQ1Nzg5NXww&ixlib=rb-4.1.0&q=85",
+      "usage": "Subtle low-opacity architectural backdrop overlay for featured sections"
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Use JavaScript (.js / .jsx) components in /app/frontend/src/.",
+    "Implement language state management for seamless switching between IT and EN without page reloads.",
+    "Ensure total dark mode compatibility via Tailwind 'dark' class strategy using the specified token palette.",
+    "Strictly follow all contrast and typography guidelines, preserving maximum readability and editorial elegance."
+  ]
+}
