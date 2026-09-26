@@ -43,6 +43,9 @@
 - Dominio di produzione: appena confermato aggiungere canonical, og:url, og:image (1200×630), hreflang reciproci, sitemap.xml (skill farm-seo-setup).
 - Dopo il deploy: attivare il toggle "Enable Search Engine Crawling and Optimisation" e riverificare sul dominio live.
 
+## Implemented (2026-09-26, iter 9)
+- Sezione "Strumenti con cui lavoro" (Profilo) espansa con TUTTI i tool del CV, organizzati in 6 gruppi: CRM & CDP (Salesforce 3 cloud, Dynamics 365, Loyal Guru, ActiveCampaign, Connectif, SAP Emarsys), Automazione (Zapier, Make, n8n, Postman, API & Webhook, ServiceNow), Data & Analytics (SQL, Python, Tableau, Power BI, SAP BO, Excel, GA, Semrush, Gretl), Omnichannel (WhatsApp API, DEM, SMS, Push, Shopify, WordPress, Qualtrics), Project & Process (Agile/Scrum, UAT, ARIS, Notion, MS Project), AI (LLM & RAG, Custom AI Assistants, Agentic AI: Codex, Claude Code, Cursor). Bilingue.
+
 ## Implemented (2026-09-26, iter 8)
 - Pagina dettaglio Spoki (/it/progetti/spoki · /en/projects/spoki): automazioni conversazionali WhatsApp Business API, racconto del round Series A da €5,5M e crescita ricavi 3x YoY — formulati come risultati aziendali con contributo nel team (mai come merito individuale). Grafico a barre generalizzato (chartValues/chartEnd nel copy). Card Spoki aggiunta in Selected Work (griglia a 4). Fix rendering etichetta SVG (template string singola).
 

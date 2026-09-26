@@ -18,16 +18,23 @@ export const About = ({ t }) => (
           <Reveal delay={0.2}>
             <aside className="rounded-2xl border border-line bg-surface p-8 shadow-soft" data-testid="about-stack">
               <h3 className="font-display text-lg font-bold text-ink">{t.about.stackTitle}</h3>
-              <ul className="mt-6 flex flex-wrap gap-2">
-                {t.about.stack.map((s) => (
-                  <li
-                    key={s}
-                    className="rounded-full border border-line bg-alt px-3.5 py-1.5 text-xs font-semibold text-mut transition-colors duration-200 hover:border-sage hover:text-ink"
-                  >
-                    {s}
-                  </li>
+              <div className="mt-6 space-y-5">
+                {t.about.stackGroups.map((group) => (
+                  <div key={group.label} data-testid={`stack-group-${group.label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
+                    <p className="text-[12px] font-bold uppercase tracking-[0.14em] text-mut">{group.label}</p>
+                    <ul className="mt-2.5 flex flex-wrap gap-1.5">
+                      {group.items.map((item) => (
+                        <li
+                          key={item}
+                          className="rounded-lg border border-line bg-alt px-2.5 py-1 text-[13px] font-semibold text-mut transition-colors duration-200 hover:border-sage hover:text-ink"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </aside>
           </Reveal>
         </div>

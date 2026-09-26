@@ -237,7 +237,32 @@ export const copy = {
         "Con NasciTara ho portato lo stesso metodo in un prodotto personale, nato da un problema umano: dare ai futuri genitori una risposta più chiara dentro una mole di dati ecografici.",
       ],
       stackTitle: "Strumenti con cui lavoro",
-      stack: ["Salesforce", "Microsoft Dynamics 365", "Loyal Guru", "ActiveCampaign", "Connectif", "Make", "Zapier", "n8n", "WhatsApp Business API", "Postman", "Prototipazione AI-assisted"],
+      stackGroups: [
+        {
+          label: "CRM & CDP",
+          items: ["Salesforce (Sales, Service & Marketing Cloud)", "Microsoft Dynamics 365", "Loyal Guru", "ActiveCampaign", "Connectif", "SAP Emarsys"],
+        },
+        {
+          label: "Automazione & integrazioni",
+          items: ["Zapier", "Make", "n8n", "Postman", "API & Webhook", "ServiceNow"],
+        },
+        {
+          label: "Data & Analytics",
+          items: ["SQL", "Python", "Tableau", "Power BI", "SAP BO", "Excel", "Google Analytics", "Semrush", "Gretl"],
+        },
+        {
+          label: "Omnichannel & Digital",
+          items: ["WhatsApp Business API", "DEM", "SMS", "Push", "Shopify", "WordPress", "Qualtrics"],
+        },
+        {
+          label: "Project & Process",
+          items: ["Agile / Scrum", "Requirements gathering", "UAT", "AS-IS / TO-BE (ARIS)", "Notion", "MS Project"],
+        },
+        {
+          label: "AI",
+          items: ["LLM & RAG (Gemini, Claude, ChatGPT, Perplexity)", "Custom AI Assistants", "Agentic AI (Codex, Claude Code, Cursor)"],
+        },
+      ],
     },
     growth: {
       eyebrow: "Growth & Business Model",
@@ -611,7 +636,32 @@ export const copy = {
         "With NasciTara I brought the same method to a personal product, born from a human problem: giving expecting parents a clearer answer inside a mass of ultrasound data.",
       ],
       stackTitle: "Tools I work with",
-      stack: ["Salesforce", "Microsoft Dynamics 365", "Loyal Guru", "ActiveCampaign", "Connectif", "Make", "Zapier", "n8n", "WhatsApp Business API", "Postman", "AI-assisted prototyping"],
+      stackGroups: [
+        {
+          label: "CRM & CDP",
+          items: ["Salesforce (Sales, Service & Marketing Cloud)", "Microsoft Dynamics 365", "Loyal Guru", "ActiveCampaign", "Connectif", "SAP Emarsys"],
+        },
+        {
+          label: "Automation & Integration",
+          items: ["Zapier", "Make", "n8n", "Postman", "API & Webhooks", "ServiceNow"],
+        },
+        {
+          label: "Data & Analytics",
+          items: ["SQL", "Python", "Tableau", "Power BI", "SAP BO", "Excel", "Google Analytics", "Semrush", "Gretl"],
+        },
+        {
+          label: "Omnichannel & Digital",
+          items: ["WhatsApp Business API", "DEM", "SMS", "Push", "Shopify", "WordPress", "Qualtrics"],
+        },
+        {
+          label: "Project & Process",
+          items: ["Agile / Scrum", "Requirements gathering", "UAT", "AS-IS / TO-BE (ARIS)", "Notion", "MS Project"],
+        },
+        {
+          label: "AI",
+          items: ["LLMs & RAG (Gemini, Claude, ChatGPT, Perplexity)", "Custom AI Assistants", "Agentic AI (Codex, Claude Code, Cursor)"],
+        },
+      ],
     },
     growth: {
       eyebrow: "Growth & Business Model",
