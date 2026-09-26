@@ -43,6 +43,9 @@
 - Dominio di produzione: appena confermato aggiungere canonical, og:url, og:image (1200×630), hreflang reciproci, sitemap.xml (skill farm-seo-setup).
 - Dopo il deploy: attivare il toggle "Enable Search Engine Crawling and Optimisation" e riverificare sul dominio live.
 
+## Implemented (2026-09-26, iter 12)
+- Fix build Vercel fallito (npm ERESOLVE): downgrade date-fns 4.1.0 → ^3.6.0 (peer di react-day-picker 8), poi rimosso react-day-picker + ui/calendar.jsx (inutilizzati, incompatibili con React 19 sotto npm). Verificato: npm install --dry-run OK, yarn build di produzione OK. Il repo GitHub va risincronizzato (package.json, yarn.lock, vercel.json, rimozione calendar.jsx) prima del Redeploy.
+
 ## Implemented (2026-09-26, iter 11)
 - Aggiunto /vercel.json (schema Vercel Services): frontend CRA (root frontend/) + backend FastAPI (root backend/, entrypoint server:app), rewrite /api/* → backend, tutto il resto → frontend. Necessario perché Vercel blocca il Deploy dei monorepo multi-servizio senza vercel.json. Il file va committato nella root del repo GitHub (da qui non c'è remote configurato → push manuale o via UI GitHub), poi "Refresh" su Vercel.
 
