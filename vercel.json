@@ -3,15 +3,9 @@
     "frontend": {
       "root": "frontend/",
       "framework": "create-react-app"
-    },
-    "backend": {
-      "root": "backend/",
-      "framework": "fastapi",
-      "entrypoint": "server:app"
     }
   },
   "rewrites": [
-    { "source": "/api/(.*)", "destination": { "service": "backend" } },
     { "source": "/(.*)", "destination": { "service": "frontend" } }
   ]
 }
