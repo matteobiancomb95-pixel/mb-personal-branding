@@ -455,7 +455,7 @@ export const copy = {
       body: "I'm Matteo Bianco, a CRM & Tech Project Manager. I design CRM ecosystems, automations and digital products that make complex processes simpler, connected and measurable.",
       ctaPrimary: "Discuss your project",
       ctaSecondary: "Explore selected work",
-      cvLabel: "Download résumé",
+      cvLabel: "Download CV",
       portraitAlt: "Portrait of Matteo Bianco",
       portraitRole: "CRM & Tech Project Manager",
       portraitPlace: "Bari, Italy",
@@ -818,7 +818,7 @@ export const copy = {
       ctaEmail: "Tell me what you want to improve",
       directLabel: "Or write to me directly",
       ctaLinkedin: "LinkedIn",
-      ctaCv: "Download résumé",
+      ctaCv: "Download CV",
     },
     footer: {
       tagline: "Connected systems. Human outcomes.",
