@@ -17,8 +17,8 @@ export const Hero = ({ t }) => {
   return (
     <section id="top" className="grain relative overflow-hidden" data-testid="hero-section">
       <div className="bg-blueprint pointer-events-none absolute inset-0 opacity-60 [mask-image:radial-gradient(70%_60%_at_70%_20%,#000,transparent)]" />
-      <div className="wrap relative grid grid-cols-12 items-start gap-10 pb-24 pt-16 lg:pb-32 lg:pt-24">
-        <div className="col-span-12 lg:col-span-7">
+      <div className="wrap relative grid grid-cols-12 items-start gap-y-10 pb-24 pt-16 lg:gap-10 lg:pb-32 lg:pt-24">
+        <div className="col-span-12 min-w-0 lg:col-span-7">
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -97,7 +97,7 @@ export const Hero = ({ t }) => {
         </div>
 
         <motion.div
-          className="col-span-12 flex justify-start lg:col-span-5 lg:justify-end"
+          className="col-span-12 min-w-0 flex justify-start lg:col-span-5 lg:justify-end"
           initial={{ opacity: 0, y: reduce ? 0 : 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45, ease: EASE }}
