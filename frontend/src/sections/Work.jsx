@@ -3,8 +3,9 @@ import { ArrowRight, ArrowUpRight, ExternalLink } from "lucide-react";
 import { NASCITARA_DETAIL_IMG, NASCITARA_URL, logoSrc } from "../i18n/copy";
 import { projectPath, sectionPath } from "../routes";
 import { Reveal, SectionHead } from "../components/Reveal";
+import { SectionCta } from "../components/SectionCta";
 
-export const Work = ({ t, locale = "it" }) => {
+export const Work = ({ t, locale = "it", page = false }) => {
   const navigate = useNavigate();
 
   const goToNascitara = (e) => {
@@ -21,7 +22,14 @@ export const Work = ({ t, locale = "it" }) => {
   return (
     <section id="work" className="bg-alt" data-testid="work-section">
       <div className="wrap py-20 lg:py-32">
-        <SectionHead eyebrow={t.work.eyebrow} title={t.work.title} id="work" />
+        <SectionHead
+          eyebrow={t.work.eyebrow}
+          title={page ? t.work.page.title : t.work.title}
+          intro={page ? t.work.page.intro : undefined}
+          as={page ? "h1" : "h2"}
+          id="work"
+        />
+        {page && <p className="mt-4 max-w-prose text-sm text-mut">{t.work.page.note}</p>}
 
         <Reveal className="mt-12">
           <article
@@ -107,13 +115,21 @@ export const Work = ({ t, locale = "it" }) => {
                 <p className="mt-1 text-[13px] font-semibold text-mut">{p.role}</p>
                 <p className="mt-3 text-sm leading-relaxed text-mut">{p.desc}</p>
                 <span className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-bold text-brand">
-                  {t.work.cardLink}
+                  {p.cta}
                   <ArrowRight size={14} className="transition-transform duration-200 ease-out group-hover:translate-x-1" />
                 </span>
               </Link>
             </Reveal>
           ))}
         </div>
+
+        {page && (
+          <Reveal className="mt-12">
+            <SectionCta to={sectionPath("contact", locale)} variant="primary" testId="work-page-cta">
+              {t.work.page.cta}
+            </SectionCta>
+          </Reveal>
+        )}
       </div>
     </section>
   );

@@ -1,31 +1,35 @@
-# Matteo Bianco — Personal branding & portfolio
+# Matteo Bianco — CRM & Tech Project Manager, AI & Automation Builder
 
-> Matteo Bianco is a CRM & Tech Project Manager and AI & Automation Builder with around six years of experience across retail, fashion, FMCG, technology, pharma and insurance. The site presents his positioning ("Connected systems. Human outcomes."), measurable impact, expertise areas, selected projects, the NasciTara case study, career journey and contact details.
+> Matteo Bianco is a CRM & Tech Project Manager and AI & Automation Builder based in Bari, Italy, with 6+ years of experience across retail, luxury kidswear, FMCG, SaaS, pharma, MedTech and insurance. He connects business goals, data and technology to deliver CRM ecosystems, automations and digital products, from discovery to release: requirements, process design, customer journeys, integrations, testing, adoption and measurement.
+
+Site: https://www.mb-personal-branding.it/ (Italian) and https://www.mb-personal-branding.it/en (English). Sitemap: https://www.mb-personal-branding.it/sitemap.xml
 
 ## Pages
 
-- / (Italian, default) and /it: homepage with hero, impact strip, expertise, selected work, NasciTara vision, career timeline, operating principles, about, growth and contact.
-- /en: same homepage, English locale.
-- /it/competenze · /en/expertise — CRM & lifecycle, automation & integrations, product & project delivery.
-- /it/progetti · /en/projects — selected work: NasciTara (featured), Despar Centro Sud loyalty app, Roche Salesforce Lightning migration.
-- /it/nascitara · /en/nascitara — NasciTara case study: present features, future vision, medical disclaimer.
-- /it/esperienza · /en/experience — career timeline and education.
-- /it/profilo · /en/about — biography and toolset.
-- /it/growth · /en/growth — business & revenue model editorial with the Maiora / Despar Centro Sud example.
-- /it/contatti · /en/contact — email and LinkedIn contact.
-- /it/progetti/coccolebimbi · /en/projects/coccolebimbi — CRM strategy for expecting parents (ongoing).
-- /it/progetti/despar-centro-sud · /en/projects/despar-centro-sud — loyalty app, quick commerce, outcomes with YoY chart.
-- /it/progetti/roche · /en/projects/roche — Salesforce Lightning migration with delivery process steps.
+- / (Italian) · /en (English): home page with positioning, impact, expertise, method, selected work, NasciTara, principles, experience, about, growth and contact.
+- /it/competenze · /en/expertise: CRM strategy and customer lifecycle, technology project management, automation and integrations, data and measurement, AI and product building.
+- /it/progetti · /en/projects: case studies.
+- /it/nascitara · /en/nascitara: NasciTara, a personal web app built from problem discovery to release.
+- /it/esperienza · /en/experience: roles, responsibilities, education and certifications.
+- /it/profilo · /en/about: profile, method and toolset.
+- /it/growth · /en/growth: growth approach based on CRM, data and process design.
+- /it/contatti · /en/contact: contact for recruiters, hiring managers, companies and founders.
+- /it/progetti/coccolebimbi · /en/projects/coccolebimbi: CRM and marketing automation for luxury kidswear ecommerce (ongoing).
+- /it/progetti/despar-centro-sud · /en/projects/despar-centro-sud: CRM, loyalty, quick commerce and partnerships at Maiora / Despar Centro Sud.
+- /it/progetti/spoki · /en/projects/spoki: marketing and conversational automation on WhatsApp Business API.
+- /it/progetti/roche · /en/projects/roche: Salesforce Lightning migration, UAT and change management at Roche Italy.
 
 ## Highlights
 
-- €2M incremental sales and ~20x MROI on the Maiora / Despar Centro Sud loyalty & CRM programme.
-- +100% YoY quick-commerce revenue with the Glovo Quick Commerce launch at Maiora.
-- Italian go-live of the Salesforce Lightning migration at Roche.
-- Coordination of three RPA bots for national tenders at Deloitte / Johnson & Johnson MedTech.
-- NasciTara: a personal web app that combines ultrasound data to estimate fetal weight, length and percentile (Hadlock model). NasciTara is for informational purposes and does not replace professional medical advice. Live at https://nascitara.vercel.app/.
+- €2M in incremental sales at approximately 20 times MROI from CRM and loyalty campaigns at Maiora / Despar Centro Sud, achieved with the marketing, ecommerce, IT and operations teams.
+- +100% year-over-year growth in Glovo quick-commerce revenue at Maiora; end-to-end launch of the Just Eat partnership (€10K co-marketing investment); SAP Emarsys migration from negotiation to rollout kickoff.
+- Spoki: marketing and process automation during the company phase that led to a €5.5M Series A and 3x revenue growth (company outcomes, contributed to as part of the team).
+- Roche Italy: Salesforce Health Cloud administration, Italian go-live of the Classic-to-Lightning migration, UAT and Field Service iPad training.
+- Deloitte for Johnson & Johnson MedTech: requirements and three RPA bots for Tender Offices in three countries.
+- NasciTara: a web app that combines data from multiple ultrasound scans and shows estimated weight, length, percentile and growth trajectory. For informational purposes only; it does not replace medical reports, opinions or consultations. Live at https://nascitara.vercel.app/.
 
 ## Contact
 
 - Email: matteobianco.mb95@gmail.com
 - LinkedIn: https://www.linkedin.com/in/matteo-bianco-4729b917a/
+- CV: https://www.mb-personal-branding.it/assets/Matteo-Bianco-CV.pdf

@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { copy } from "../i18n/copy";
-import { applySeo } from "../lib/seo";
+import { applyPageSeo } from "../lib/seo";
 import { useLenis } from "../hooks/useLenis";
 import { Header } from "../components/Header";
 import { FlowLine } from "../components/FlowLine";
 import { Hero } from "../sections/Hero";
 import { Impact } from "../sections/Impact";
 import { Expertise } from "../sections/Expertise";
+import { Method } from "../sections/Method";
 import { Work } from "../sections/Work";
 import { NasciTara } from "../sections/NasciTara";
 import { Career } from "../sections/Career";
@@ -22,8 +23,8 @@ export default function Home({ locale }) {
   useLenis([locale]);
 
   useEffect(() => {
-    applySeo(locale, t.seo);
-  }, [locale, t]);
+    applyPageSeo({ type: "home", locale });
+  }, [locale]);
 
   return (
     <div className="min-h-screen bg-bg text-ink" data-testid={`home-${locale}`}>
@@ -32,14 +33,15 @@ export default function Home({ locale }) {
         <Hero t={t} />
         <FlowLine />
         <Impact t={t} />
-        <Expertise t={t} />
+        <Expertise t={t} locale={locale} />
+        <Method t={t} />
         <Work t={t} locale={locale} />
         <FlowLine coral />
-        <NasciTara t={t} />
-        <Career t={t} />
+        <NasciTara t={t} locale={locale} />
         <Principles t={t} />
-        <About t={t} />
-        <Growth t={t} />
+        <Career t={t} locale={locale} />
+        <About t={t} locale={locale} />
+        <Growth t={t} locale={locale} />
         <Contact t={t} />
       </main>
       <Footer t={t} />

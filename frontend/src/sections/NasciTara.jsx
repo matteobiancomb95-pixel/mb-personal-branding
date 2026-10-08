@@ -1,11 +1,16 @@
 import { useRef, useState } from "react";
-import { Check, ExternalLink, Info, Play, Sparkles } from "lucide-react";
+import { ExternalLink, Info, Play } from "lucide-react";
 import { NASCITARA_FLOW_IMG, NASCITARA_REEL, NASCITARA_URL } from "../i18n/copy";
+import { sectionPath } from "../routes";
 import { Reveal } from "../components/Reveal";
+import { SectionCta } from "../components/SectionCta";
 
-export const NasciTara = ({ t }) => {
+export const NasciTara = ({ t, locale = "it", page = false }) => {
   const videoRef = useRef(null);
   const [playing, setPlaying] = useState(false);
+  const n = t.nascitara;
+  const Title = page ? "h1" : "h2";
+  const Sub = page ? "h2" : "h3";
 
   const startVideo = () => {
     setPlaying(true);
@@ -19,17 +24,20 @@ export const NasciTara = ({ t }) => {
           <div className="grid grid-cols-1 items-center gap-8 border-b border-line bg-alt p-8 lg:grid-cols-12 lg:p-12">
             <Reveal className="lg:col-span-7">
               <p className="eyebrow text-coral" data-testid="nascitara-eyebrow">
-                {t.nascitara.eyebrow}
+                {n.eyebrow}
               </p>
-              <h2 className="display-2 mt-3 max-w-2xl font-bold text-ink" data-testid="nascitara-title">
-                {t.nascitara.title}
-              </h2>
-              <p className="mt-4 max-w-prose text-mut">{t.nascitara.intro}</p>
+              <Title
+                className={`mt-3 max-w-2xl font-bold text-ink ${page ? "display-h1" : "display-2"}`}
+                data-testid="nascitara-title"
+              >
+                {n.title}
+              </Title>
+              <p className="mt-4 max-w-prose text-mut lg:text-lg">{n.intro}</p>
             </Reveal>
             <Reveal delay={0.12} className="lg:col-span-5">
               <img
                 src={NASCITARA_FLOW_IMG}
-                alt={t.nascitara.collageAlt}
+                alt={n.collageAlt}
                 data-testid="nascitara-flow-image"
                 width="1175"
                 height="1568"
@@ -40,45 +48,40 @@ export const NasciTara = ({ t }) => {
             </Reveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <Reveal className="border-b border-line p-8 md:border-b-0 md:border-r lg:p-12">
-              <div data-testid="nascitara-today">
-                <h3 className="flex items-center gap-2.5 font-display text-xl font-bold text-ink">
-                  <Check size={18} className="text-brand" aria-hidden="true" />
-                  {t.nascitara.todayTitle}
-                </h3>
-                <ul className="mt-6 space-y-4">
-                  {t.nascitara.today.map((item) => (
-                    <li key={item} className="flex gap-3 text-mut">
-                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand" aria-hidden="true" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
-            <Reveal delay={0.1} className="p-8 lg:p-12">
-              <div data-testid="nascitara-future">
-                <h3 className="flex items-center gap-2.5 font-display text-xl font-bold text-ink">
-                  <Sparkles size={18} className="text-coral" aria-hidden="true" />
-                  {t.nascitara.futureTitle}
-                </h3>
-                <ul className="mt-6 space-y-4">
-                  {t.nascitara.future.map((item) => (
-                    <li key={item} className="flex gap-3 text-mut">
-                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-coral" aria-hidden="true" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3" data-testid="nascitara-blocks">
+            {n.blocks.map((b, i) => (
+              <Reveal
+                key={b.title}
+                delay={0.06 * i}
+                className={`border-line p-8 lg:p-10 ${i < n.blocks.length - 1 ? "border-b md:border-b-0 md:border-r" : ""}`}
+              >
+                <Sub className="font-display text-lg font-bold text-ink">{b.title}</Sub>
+                <p className="mt-3 text-[15px] leading-relaxed text-mut">{b.body}</p>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="border-t border-line p-8 lg:p-12" data-testid="nascitara-process">
+            <Reveal>
+              <Sub className="font-display text-lg font-bold text-ink">{n.processTitle}</Sub>
+              <ol className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {n.process.map((step, i) => (
+                  <li key={step} className="flex items-center gap-3.5 rounded-xl border border-line bg-alt px-4 py-3.5">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-coral font-display text-[12px] font-bold text-coral">
+                      {i + 1}
+                    </span>
+                    <span className="text-[15px] font-semibold leading-snug text-ink">{step}</span>
+                  </li>
+                ))}
+              </ol>
+              <p className="mt-6 max-w-prose text-sm text-mut">{n.credibility}</p>
             </Reveal>
           </div>
 
           <div className="border-t border-line p-8 lg:p-12" data-testid="nascitara-video-block">
             <Reveal>
-              <p className="eyebrow text-mut">{t.nascitara.videoLabel}</p>
-              <p className="mt-2 max-w-prose text-sm text-mut">{t.nascitara.videoCaption}</p>
+              <p className="eyebrow text-mut">{n.videoLabel}</p>
+              <p className="mt-2 max-w-prose text-sm text-mut">{n.videoCaption}</p>
               <div className="relative mx-auto mt-6 max-w-3xl overflow-hidden rounded-2xl border border-line shadow-soft" style={{ backgroundColor: "#10232C" }}>
                 <video
                   ref={videoRef}
@@ -94,7 +97,7 @@ export const NasciTara = ({ t }) => {
                   <button
                     type="button"
                     onClick={startVideo}
-                    aria-label={t.nascitara.videoPlay}
+                    aria-label={n.videoPlay}
                     data-testid="nascitara-video-play"
                     className="absolute inset-0 flex items-center justify-center transition-colors duration-200 hover:bg-black/10"
                   >
@@ -107,23 +110,30 @@ export const NasciTara = ({ t }) => {
             </Reveal>
           </div>
 
-          <div className="flex flex-col items-start justify-between gap-6 border-t border-line p-8 sm:flex-row sm:items-center lg:p-12">
+          <div className="flex flex-col items-start justify-between gap-6 border-t border-line p-8 lg:flex-row lg:items-center lg:p-12">
             <Reveal className="flex max-w-2xl items-start gap-3">
               <Info size={18} className="mt-0.5 shrink-0 text-coral" aria-hidden="true" />
               <p className="text-sm leading-relaxed text-mut" data-testid="nascitara-disclaimer">
-                {t.nascitara.disclaimer}
+                {n.disclaimer}
               </p>
             </Reveal>
-            <a
-              href={NASCITARA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="nascitara-vision-cta"
-              className="btn inline-flex h-12 shrink-0 items-center gap-2 rounded-xl bg-brand px-6 font-display text-sm font-bold text-onbrand hover:bg-brand-hover"
-            >
-              {t.nascitara.cta}
-              <ExternalLink size={15} className="btn-arrow" />
-            </a>
+            <div className="flex shrink-0 flex-wrap gap-3">
+              <a
+                href={NASCITARA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="nascitara-vision-cta"
+                className="btn inline-flex h-12 items-center gap-2 rounded-xl bg-brand px-6 font-display text-sm font-bold text-onbrand hover:bg-brand-hover"
+              >
+                {n.cta}
+                <ExternalLink size={15} className="btn-arrow" />
+              </a>
+              {page && (
+                <SectionCta to={sectionPath("contact", locale)} testId="nascitara-contact-cta">
+                  {n.ctaSecondary}
+                </SectionCta>
+              )}
+            </div>
           </div>
         </div>
       </div>

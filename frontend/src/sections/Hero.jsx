@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDown, ArrowRight, Download } from "lucide-react";
+import { ArrowDown, ArrowRight, FileText } from "lucide-react";
 import { CV_PDF_URL, PORTRAIT_URL } from "../i18n/copy";
 
 const EASE = [0.16, 1, 0.3, 1];
@@ -18,7 +18,7 @@ export const Hero = ({ t }) => {
     <section id="top" className="grain relative overflow-hidden" data-testid="hero-section">
       <div className="bg-blueprint pointer-events-none absolute inset-0 opacity-60 [mask-image:radial-gradient(70%_60%_at_70%_20%,#000,transparent)]" />
       <div className="wrap relative grid grid-cols-12 items-start gap-y-10 pb-24 pt-16 lg:gap-10 lg:pb-32 lg:pt-24">
-        <div className="col-span-12 min-w-0 lg:col-span-7">
+        <div className="col-span-12 min-w-0 lg:col-span-8">
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -29,7 +29,7 @@ export const Hero = ({ t }) => {
             {t.hero.eyebrow}
           </motion.p>
 
-          <h1 className="display-1 mt-6 font-extrabold text-ink" data-testid="hero-title">
+          <h1 className="display-hero mt-6 font-extrabold text-ink" data-testid="hero-title">
             {t.hero.titleLines.map((line, i) => (
               <span className="mask-line" key={i}>
                 <motion.span
@@ -40,19 +40,24 @@ export const Hero = ({ t }) => {
                 >
                   {line}
                 </motion.span>
+                {i < t.hero.titleLines.length - 1 && " "}
               </span>
             ))}
           </h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: reduce ? 0 : 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.65, ease: EASE }}
-            className="mt-6 max-w-prose text-base text-mut lg:text-lg"
-            data-testid="hero-body"
+            className="mt-6 max-w-prose"
           >
-            {t.hero.body}
-          </motion.p>
+            <p className="font-display text-base font-bold text-ink lg:text-lg" data-testid="hero-subtitle">
+              {t.hero.subtitle}
+            </p>
+            <p className="mt-3 text-base text-mut lg:text-lg" data-testid="hero-body">
+              {t.hero.body}
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: reduce ? 0 : 12 }}
@@ -86,18 +91,19 @@ export const Hero = ({ t }) => {
             </a>
             <a
               href={CV_PDF_URL}
-              download="Matteo_Bianco_CV.pdf"
-              data-testid="hero-cv-download"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="hero-cv-link"
               className="link-sweep inline-flex min-h-[44px] items-center gap-2 px-1 text-sm font-semibold text-mut transition-colors duration-200 hover:text-brand"
             >
-              <Download size={15} />
+              <FileText size={15} />
               {t.hero.cvLabel}
             </a>
           </motion.div>
         </div>
 
         <motion.div
-          className="col-span-12 min-w-0 flex justify-start lg:col-span-5 lg:justify-end"
+          className="col-span-12 min-w-0 flex justify-start lg:col-span-4 lg:justify-end"
           initial={{ opacity: 0, y: reduce ? 0 : 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45, ease: EASE }}
@@ -120,7 +126,7 @@ export const Hero = ({ t }) => {
                 decoding="async"
                 fetchpriority="high"
               />
-              <figcaption className="flex items-baseline justify-between gap-3 px-1 pb-1 pt-4">
+              <figcaption className="flex items-baseline justify-between gap-3 px-1 pb-14 pt-4">
                 <span className="font-display text-sm font-bold text-ink">{t.hero.portraitRole}</span>
                 <span className="text-[13px] font-semibold text-mut">{t.hero.portraitPlace}</span>
               </figcaption>

@@ -82,6 +82,12 @@
 - Ritratto professionale reale integrato nell'hero (cornice circolare con tilt 3D), file in `public/assets/portrait.jpg`.
 - CV scaricabile: `public/assets/Matteo_Bianco_CV.pdf` + pulsanti "Scarica il CV"/"Download CV" in hero e contatti (entrambe le lingue).
 
+## Implemented (2026-10-08, audit copy + SEO)
+- Copy IT/EN riscritto secondo l'audit "Matteo-Bianco-Website-Audit-Copy-SEO" (posizionamento CRM & Tech Project Manager, AI & Automation Builder; CTA "Parliamo di un ruolo o di un progetto"; "oltre sei anni"/"6+ years"; growth ancorato a evidenze; Agentic AI → "sviluppo assistito dall'AI"). URL esistenti invariati.
+- Home: nuova sezione Metodo, Impatto a 5 KPI, Competenze a 4 card, Principi a 5. Ogni pagina sezione ha un proprio H1 e contenuto dedicato (prop `page`), breadcrumb visibili + BreadcrumbList.
+- SEO: `src/lib/seoData.js` è la fonte unica; `scripts/prerender.mjs` (eseguito da `npm run build`) genera HTML statico per ogni route (lang, title, description, canonical, hreflang it/en/x-default, OG, Twitter large card, JSON-LD localizzato) e `sitemap.xml`; `src/lib/seo.js` aggiorna l'head durante la navigazione client. Dominio: https://www.mb-personal-branding.it. OG image `public/assets/og-image.png` (1200×630).
+- CV: nuovo PDF (con link Personal Project Book) come `/assets/Matteo-Bianco-CV.pdf`, metadati titolo/autore/lingua; `/assets/Matteo_Bianco_CV.pdf` resta come copia identica per i vecchi link. CTA "Consulta il CV"/"View my CV" in nuova scheda.
+
 ## Backlog (prioritized)
 - P0: nessun asset TODO rimasto (ritratto, mockup NasciTara, LinkedIn, CV tutti integrati).
 - P1: dominio personale + canonical/hreflang/sitemap + og:image.

@@ -1,9 +1,11 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, MoveRight } from "lucide-react";
+import { MoveRight } from "lucide-react";
 import { copy, logoSrc } from "../i18n/copy";
-import { projectPath, sectionPath } from "../routes";
-import { applySeo } from "../lib/seo";
+import { sectionPath } from "../routes";
+import { applyPageSeo } from "../lib/seo";
+import { breadcrumbTrail } from "../lib/seoData";
+import { Breadcrumb } from "../components/Breadcrumb";
+import { SectionCta } from "../components/SectionCta";
 import { useLenis } from "../hooks/useLenis";
 import { Header } from "../components/Header";
 import { Footer } from "../sections/Footer";
@@ -36,13 +38,13 @@ const StepFlow = ({ steps }) => (
         <li key={step} className="flex items-center">
           <span
             className={`flex h-9 w-9 items-center justify-center rounded-full border-2 font-display text-[13px] font-bold ${
-              i === steps.length - 1 ? "border-brand bg-brand text-onbrand" : "border-line-strong text-mut"
+              i === steps.length - 1 ? "border-brand bg-brand text-onbrand" : "border-linestrong text-mut"
             }`}
           >
             {i + 1}
           </span>
           <span className="ml-2.5 text-sm font-semibold text-ink">{step}</span>
-          {i < steps.length - 1 && <span className="mx-4 hidden h-px w-8 bg-line-strong sm:block" aria-hidden="true" />}
+          {i < steps.length - 1 && <span className="mx-4 hidden h-px w-8 bg-linestrong sm:block" aria-hidden="true" />}
           {i < steps.length - 1 && <span className="mx-3 sm:hidden" aria-hidden="true">→</span>}
         </li>
       ))}
@@ -75,47 +77,45 @@ const JourneyFlow = ({ stages }) => (
 export default function ProjectPage({ locale, project }) {
   const t = copy[locale];
   const p = t.projectPages[project];
+  const page = { type: "project", key: project, locale };
 
   useLenis([locale, project]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    applySeo(locale, { title: p.seoTitle, description: p.seoDesc, ogLocale: t.seo.ogLocale });
-  }, [locale, project, p, t]);
+    applyPageSeo({ type: "project", key: project, locale });
+  }, [locale, project]);
 
   return (
     <div className="min-h-screen bg-bg text-ink" data-testid={`project-${project}-${locale}`}>
       <Header t={t} locale={locale} />
       <main id="main">
-        <div className="wrap pt-10">
-          <Link
-            to={sectionPath("work", locale)}
-            data-testid="project-back"
-            className="link-sweep inline-flex min-h-[44px] items-center gap-2 text-sm font-semibold text-mut transition-colors duration-200 hover:text-brand"
-          >
-            <ArrowLeft size={15} />
-            {t.projectPages.backToProjects}
-          </Link>
-        </div>
+        <Breadcrumb items={breadcrumbTrail(page, locale)} label={t.nav.breadcrumb} />
 
         <div className="wrap grid grid-cols-1 gap-12 py-12 lg:grid-cols-12 lg:py-16">
           <div className="lg:col-span-7">
             <Reveal>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 <p className="eyebrow text-brand" data-testid="project-category">
                   {p.category}
                 </p>
                 {p.status && (
-                  <span className="inline-flex items-center gap-1.5 rounded-md border border-line bg-alt px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-mut" data-testid="project-status">
+                  <span
+                    className="inline-flex items-center gap-1.5 rounded-md border border-line bg-alt px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-mut"
+                    data-testid="project-status"
+                  >
                     <span className="h-1.5 w-1.5 rounded-full bg-sage" />
                     {p.status}
                   </span>
                 )}
               </div>
-              <h1 className="display-2 mt-4 font-extrabold text-ink" data-testid="project-title">
+              <h1 className="display-h1 mt-4 font-extrabold text-ink" data-testid="project-title">
                 {p.title}
               </h1>
-              <div className="mt-5 flex flex-wrap items-center gap-4">
+              <p className="mt-6 max-w-prose text-base leading-relaxed text-mut lg:text-lg" data-testid="project-intro">
+                {p.intro}
+              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-4">
                 <span className="flex items-center gap-3 rounded-xl border border-line bg-surface px-3 py-2">
                   <span className="flex h-9 items-center rounded-lg bg-white px-2.5">
                     <img src={logoSrc(p.logo)} alt={p.logoAlt} className="max-h-5 w-auto" loading="lazy" decoding="async" />
@@ -124,34 +124,28 @@ export default function ProjectPage({ locale, project }) {
                 </span>
                 <span className="tnum text-[13px] font-bold uppercase tracking-[0.14em] text-mut">{p.period}</span>
               </div>
-              <p className="mt-7 max-w-prose text-base leading-relaxed text-mut lg:text-lg" data-testid="project-intro">
-                {p.intro}
-              </p>
-
-              <h2 className="mt-10 font-display text-xl font-bold text-ink">{p.activitiesTitle}</h2>
-              <ul className="mt-5 space-y-3.5" data-testid="project-activities">
-                {p.activities.map((a) => (
-                  <li key={a} className="flex gap-3 text-mut">
-                    <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand" aria-hidden="true" />
-                    <span>{a}</span>
-                  </li>
-                ))}
-              </ul>
             </Reveal>
+
+            <div className="mt-10 space-y-9" data-testid="project-blocks">
+              {p.blocks.map((b, i) => (
+                <Reveal key={b.title} delay={0.05 * i}>
+                  <h2 className="font-display text-xl font-bold text-ink">{b.title}</h2>
+                  <p className="mt-3 max-w-prose leading-relaxed text-mut lg:text-[17px]">{b.body}</p>
+                </Reveal>
+              ))}
+            </div>
           </div>
 
           <div className="lg:col-span-5">
             <Reveal delay={0.12}>
-              <aside className="rounded-2xl border border-line bg-surface p-8 shadow-soft" data-testid="project-outcome">
+              <aside className="rounded-2xl border border-line bg-surface p-8 shadow-soft lg:sticky lg:top-28" data-testid="project-outcome">
                 <h2 className="font-display text-lg font-bold text-ink">{p.outcomeTitle}</h2>
 
                 {p.stats && (
                   <ul className="mt-5 space-y-4">
                     {p.stats.map((s) => (
                       <li key={s.value} className="flex items-baseline gap-4 border-b border-line pb-4 last:border-0 last:pb-0">
-                        <span className="tnum shrink-0 font-display text-2xl font-extrabold tracking-tight text-brand">
-                          {s.value}
-                        </span>
+                        <span className="tnum shrink-0 font-display text-2xl font-extrabold tracking-tight text-brand">{s.value}</span>
                         <span className="text-sm leading-snug text-mut">{s.label}</span>
                       </li>
                     ))}
@@ -172,14 +166,9 @@ export default function ProjectPage({ locale, project }) {
 
         <div className="wrap pb-20 lg:pb-28">
           <Reveal>
-            <Link
-              to={sectionPath("contact", locale)}
-              data-testid="project-cta"
-              className="btn inline-flex h-12 items-center gap-2 rounded-xl bg-brand px-6 font-display text-sm font-bold text-onbrand shadow-soft hover:bg-brand-hover"
-            >
-              {t.projectPages.cta}
-              <ArrowRight size={16} className="btn-arrow" />
-            </Link>
+            <SectionCta to={sectionPath("contact", locale)} variant="primary" testId="project-cta">
+              {p.cta}
+            </SectionCta>
           </Reveal>
         </div>
       </main>
